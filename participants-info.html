@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIGCTrustDetect at COLING 2027: Participants Info</title>
+<meta name="description" content="The 1st Workshop on AI-Generated Content Detection and Trustworthy Governance (AIGCTrustDetect) at COLING 2027, Macau.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Noto+Serif+SC:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#EEEEEE}
+a{color:#D50100}a:hover{color:#8F0000}
+:focus-visible{outline:3px solid #0156AA;outline-offset:3px}
+button{font-family:inherit}
+@keyframes unfold{from{transform:scaleX(.18);opacity:0}to{transform:scaleX(1);opacity:1}}
+.unfold{animation:unfold 700ms cubic-bezier(.2,.8,.2,1) both;transform-origin:50% 0}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.rise{animation:rise 420ms ease both}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="page-template">
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif; color: #2A313C; background: #EEEEEE; min-height: 100vh">
+<header style="background: #EEEEEE; border-bottom: 1px solid #DDDEE0">
+<div style="max-width: 1100px; margin: 0 auto; padding: 10px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px">
+<div style="display: flex; align-items: center; gap: 16px; margin-right: auto">
+<a href="https://2027.coling-iccl.org/" aria-label="COLING 2027 main conference website" style="display: inline-flex; align-items: center; min-height: 48px"><img src="assets/images/coling2027-logo.png" alt="COLING 2027, May 9–14, 2027, Macao, China" style="display: block; height: 60px; width: auto"></a>
+<span aria-hidden="true" style="width: 1px; height: 44px; background: #CECFD1"></span>
+<a href="index.html" style="display: inline-flex; flex-direction: column; justify-content: center; min-height: 48px; color: #2A313C; text-decoration: none">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 19px"><svg width="30" height="18" viewBox="0 0 34 20" fill="none" aria-hidden="true"><rect x="1" y="1" width="32" height="18" rx="9" stroke="#2A313C" stroke-width="2"></rect><circle cx="10" cy="10" r="4" fill="#E39B1B"></circle><circle cx="24" cy="10" r="4" fill="#0156AA"></circle><line x1="17" y1="4" x2="17" y2="16" stroke="#2A313C" stroke-width="2" stroke-dasharray="2 2"></line></svg>AIGCTrustDetect</span>
+<span style="font-size: 13px; color: #5A616B">Workshop at COLING 2027</span>
+</a>
+</div>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; font-size: 16px">
+<a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Home</a>
+<div style="position: relative">
+<button onClick="{{toggleCalls}}" aria-expanded="{{callsExpanded}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #2A313C; font-size: 16px; font-weight: 400; cursor: pointer">Calls<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0 L10 0 L5 6 Z" fill="#2A313C"></path></svg></button>
+<sc-if value="{{callsOpen}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="position: absolute; top: 100%; left: -12px; z-index: 30; min-width: 210px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 6px; box-shadow: 0 12px 28px -12px rgba(42, 49, 60, 0.35); padding: 6px 0; display: flex; flex-direction: column">
+<a href="call-for-papers.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Call for Papers</a>
+<a href="shared-tasks.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Shared Tasks</a>
+</div>
+</sc-if>
+</div>
+<div style="position: relative">
+<button onClick="{{toggleCommittee}}" aria-expanded="{{committeeExpanded}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #2A313C; font-size: 16px; font-weight: 400; cursor: pointer">Committee<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0 L10 0 L5 6 Z" fill="#2A313C"></path></svg></button>
+<sc-if value="{{committeeOpen}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="position: absolute; top: 100%; left: -12px; z-index: 30; min-width: 210px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 6px; box-shadow: 0 12px 28px -12px rgba(42, 49, 60, 0.35); padding: 6px 0; display: flex; flex-direction: column">
+<a href="organizers.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Organizers</a>
+<a href="program-committee.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Program Committee</a>
+</div>
+</sc-if>
+</div>
+<a href="speakers.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Speakers</a>
+<a href="program.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Program</a>
+<a href="participants-info.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid #0156AA; font-weight: 700">Participants Info</a>
+<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Contact</a>
+</nav>
+</div>
+</header>
+<section aria-label="Page banner" style="background-color: #0055A6; background-image: linear-gradient(90deg, rgba(0, 60, 130, 0.55) 0%, rgba(0, 60, 130, 0.25) 45%, rgba(0, 60, 130, 0) 70%), url('assets/images/coling2027-banner.jpg'), linear-gradient(90deg, #0055A6 0%, #0063B1 50%, #0070BC 100%); background-size: cover, 100% auto, cover; background-position: center, center bottom, center; background-repeat: no-repeat; min-height: clamp(200px, 19vw, 280px); color: #FFFFFF; display: flex">
+<div style="width: 100%; max-width: 1100px; margin: 0 auto; padding: clamp(28px, 3.4vw, 44px) clamp(20px, 4vw, 40px) 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-shadow: 0 2px 6px rgba(0, 20, 60, 0.35)">
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #D9ECFF">AIGCTrustDetect @ COLING 2027</p>
+<h1 style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; font-weight: 700">Participants Info</h1>
+</div>
+</section>
+<main style="max-width: 1100px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px)">
+<section id="venue" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Venue</h2>
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 52em">
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 16.5px; line-height: 1.55">
+<tbody>
+<tr style="border-top: 1px solid #CECFD1; border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Main venue</th><td style="padding: 12px 0">Galaxy International Convention Center (GICC), Galaxy Macau, Cotai, Macau</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Workshop room</th><td style="padding: 12px 0">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Workshop date</th><td style="padding: 12px 0">[TBD], May 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Format</th><td style="padding: 12px 0">In person, with live streaming for virtual participants</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="registration" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Registration</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; max-width: 52em">Workshop attendance is through COLING 2027 conference registration. Registration link and fees: [TBD].</p>
+</section>
+<section id="travel" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Hotels and Transport</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; max-width: 52em">Recommended hotels, shuttle buses and directions from the airport and ferry terminals are maintained on the <a href="https://2027.coling-iccl.org/participants-info/" style="font-weight: 600">COLING 2027 Participants Info</a> page.</p>
+</section>
+<section id="macau" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">About Macau</h2>
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 52em">
+<p style="margin: 0; font-size: 17px; line-height: 1.7">Chinese and Portuguese are both official languages in Macau, and Cantonese is the most widely spoken. Its architecture, food and traditions reflect centuries of Chinese and Portuguese influence, and the Historic Centre of Macao is a UNESCO World Heritage Site. A fitting place, we think, for a workshop about detection that works across languages.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7">The wave pattern at the bottom of every page is drawn from the Portuguese pavement of Senado Square, rendered in zeros and ones.</p>
+</div>
+</section>
+</main>
+<div aria-hidden="true" style="overflow: hidden; line-height: 0; margin-top: clamp(48px, 6vw, 72px)">
+<svg width="100%" height="80" viewBox="0 0 1440 96" preserveAspectRatio="xMidYMid slice">
+<defs>
+<path id="piwv1" d="M-20 22 Q 70 -6 160 22 T 340 22 T 520 22 T 700 22 T 880 22 T 1060 22 T 1240 22 T 1420 22 T 1600 22"></path>
+<path id="piwv2" d="M-110 52 Q -20 24 70 52 T 250 52 T 430 52 T 610 52 T 790 52 T 970 52 T 1150 52 T 1330 52 T 1510 52"></path>
+<path id="piwv3" d="M-20 82 Q 70 54 160 82 T 340 82 T 520 82 T 700 82 T 880 82 T 1060 82 T 1240 82 T 1420 82 T 1600 82"></path>
+</defs>
+<rect width="1440" height="96" fill="#EEEEEE"></rect>
+<use href="#piwv1" stroke="#2A313C" stroke-width="18" fill="none"></use>
+<use href="#piwv2" stroke="#2A313C" stroke-width="18" fill="none"></use>
+<use href="#piwv3" stroke="#2A313C" stroke-width="18" fill="none"></use>
+<text fill="#EEEEEE" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1.5" dy="3.5"><textPath href="#piwv1">01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000 01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101</textPath></text>
+<text fill="#EEEEEE" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1.5" dy="3.5"><textPath href="#piwv2">01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000 01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000</textPath></text>
+<text fill="#EEEEEE" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1.5" dy="3.5"><textPath href="#piwv3">01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000 01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110</textPath></text>
+</svg>
+</div>
+<footer style="background: #2A313C; color: #D5D8DD">
+<div style="max-width: 1100px; margin: 0 auto; padding: 32px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; gap: 12px 40px; align-items: center; font-size: 15px">
+<span style="font-weight: 700; color: #FFFFFF; font-size: 17px; margin-right: auto">AIGCTrustDetect, a workshop of COLING 2027</span>
+<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">Contact the organizers</a>
+<a href="https://2027.coling-iccl.org/" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">COLING 2027 main site</a>
+</div>
+</footer>
+</div>
+</template>
+<script src="assets/js/runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menu: null };
+  }
+  renderVals() {
+    const s = this.state;
+    const t = (n) => () => this.setState({ menu: this.state.menu === n ? null : n });
+    return {
+      callsOpen: s.menu === 'calls',
+      committeeOpen: s.menu === 'committee',
+      callsExpanded: s.menu === 'calls' ? 'true' : 'false',
+      committeeExpanded: s.menu === 'committee' ? 'true' : 'false',
+      toggleCalls: t('calls'),
+      toggleCommittee: t('committee'),
+      closeMenu: () => this.setState({ menu: null })
+    };
+  }
+}
+AIGC.mount(Component);
+</script>
+</body>
+</html>

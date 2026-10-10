@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIGCTrustDetect at COLING 2027: Home</title>
+<meta name="description" content="The 1st Workshop on AI-Generated Content Detection and Trustworthy Governance (AIGCTrustDetect) at COLING 2027, Macau.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Noto+Serif+SC:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#EEEEEE}
+a{color:#D50100}a:hover{color:#8F0000}
+:focus-visible{outline:3px solid #0156AA;outline-offset:3px}
+button{font-family:inherit}
+@keyframes unfold{from{transform:scaleX(.18);opacity:0}to{transform:scaleX(1);opacity:1}}
+.unfold{animation:unfold 700ms cubic-bezier(.2,.8,.2,1) both;transform-origin:50% 0}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.rise{animation:rise 420ms ease both}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="page-template">
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif; color: #2A313C; background: #EEEEEE; min-height: 100vh">
+
+<header style="background: #EEEEEE; border-bottom: 1px solid #DDDEE0">
+<div style="max-width: 1100px; margin: 0 auto; padding: 10px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px">
+<div style="display: flex; align-items: center; gap: 16px; margin-right: auto">
+<a href="https://2027.coling-iccl.org/" aria-label="COLING 2027 main conference website" style="display: inline-flex; align-items: center; min-height: 48px"><img src="assets/images/coling2027-logo.png" alt="COLING 2027, May 9–14, 2027, Macao, China" style="display: block; height: 60px; width: auto"></a>
+<span aria-hidden="true" style="width: 1px; height: 44px; background: #CECFD1"></span>
+<a href="index.html" style="display: inline-flex; flex-direction: column; justify-content: center; min-height: 48px; color: #2A313C; text-decoration: none">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 19px"><svg width="30" height="18" viewBox="0 0 34 20" fill="none" aria-hidden="true"><rect x="1" y="1" width="32" height="18" rx="9" stroke="#2A313C" stroke-width="2"></rect><circle cx="10" cy="10" r="4" fill="#E39B1B"></circle><circle cx="24" cy="10" r="4" fill="#0156AA"></circle><line x1="17" y1="4" x2="17" y2="16" stroke="#2A313C" stroke-width="2" stroke-dasharray="2 2"></line></svg>AIGCTrustDetect</span>
+<span style="font-size: 13px; color: #5A616B">Workshop at COLING 2027</span>
+</a>
+</div>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; font-size: 16px">
+<a href="index.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid #0156AA; font-weight: 700">Home</a>
+<div style="position: relative">
+<button onClick="{{toggleCalls}}" aria-expanded="{{callsExpanded}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #2A313C; font-size: 16px; font-weight: 400; cursor: pointer">Calls<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0 L10 0 L5 6 Z" fill="#2A313C"></path></svg></button>
+<sc-if value="{{callsOpen}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="position: absolute; top: 100%; left: -12px; z-index: 30; min-width: 210px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 6px; box-shadow: 0 12px 28px -12px rgba(42, 49, 60, 0.35); padding: 6px 0; display: flex; flex-direction: column">
+<a href="call-for-papers.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Call for Papers</a>
+<a href="shared-tasks.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Shared Tasks</a>
+</div>
+</sc-if>
+</div>
+<div style="position: relative">
+<button onClick="{{toggleCommittee}}" aria-expanded="{{committeeExpanded}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #2A313C; font-size: 16px; font-weight: 400; cursor: pointer">Committee<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0 L10 0 L5 6 Z" fill="#2A313C"></path></svg></button>
+<sc-if value="{{committeeOpen}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="position: absolute; top: 100%; left: -12px; z-index: 30; min-width: 210px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 6px; box-shadow: 0 12px 28px -12px rgba(42, 49, 60, 0.35); padding: 6px 0; display: flex; flex-direction: column">
+<a href="organizers.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Organizers</a>
+<a href="program-committee.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Program Committee</a>
+</div>
+</sc-if>
+</div>
+<a href="speakers.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Speakers</a>
+<a href="program.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Program</a>
+<a href="participants-info.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Participants Info</a>
+<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Contact</a>
+</nav>
+</div>
+</header>
+
+<section id="top" aria-label="Workshop banner" style="background-color: #0055A6; background-image: linear-gradient(90deg, rgba(0, 60, 130, 0.55) 0%, rgba(0, 60, 130, 0.25) 45%, rgba(0, 60, 130, 0) 70%), url('assets/images/coling2027-banner.jpg'), linear-gradient(90deg, #0055A6 0%, #0063B1 50%, #0070BC 100%); background-size: cover, 100% auto, cover; background-position: center, center bottom, center; background-repeat: no-repeat; min-height: clamp(200px, 19vw, 280px); color: #FFFFFF; display: flex">
+<div style="width: 100%; max-width: 1100px; margin: 0 auto; padding: clamp(28px, 3.4vw, 44px) clamp(20px, 4vw, 40px) 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-shadow: 0 2px 6px rgba(0, 20, 60, 0.35)">
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #D9ECFF">AIGCTrustDetect @ COLING 2027</p>
+<h1 style="margin: 0; font-size: clamp(26px, 2.9vw, 38px); line-height: 1.15; font-weight: 700; max-width: 24em">The 1st Workshop on AI-Generated Content Detection and Trustworthy Governance</h1>
+<p style="margin: 4px 0 0; font-size: clamp(16px, 1.4vw, 19px)">Macau, China, May 2027 (workshop date TBD)</p>
+</div>
+</section>
+
+<main style="max-width: 1100px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px)">
+
+<section id="welcome" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 24px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">Welcome!</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: stretch">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 18px; line-height: 1.65">The 1st Workshop on AI-Generated Content Detection and Trustworthy Governance (AIGCTrustDetect) will take place in <strong>Macau, China</strong> as part of <strong>COLING 2027</strong> (May 9–14, 2027).</p>
+<p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 21px; line-height: 1.5; color: #0156AA">Going beyond binary AIGC detection toward full-stack, explainable, and evasion-resistant governance that generalizes across languages and deploys cost-effectively in the real world.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7">Existing workshops in this area have focused mainly on binary AIGC detection, a narrow paradigm that falls short of the complex governance needs of real-world applications. AIGCTrustDetect broadens the scope from standalone detection to a full-stack framework for trustworthy governance, with an emphasis on generalizability and deployment value.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7">The program combines invited keynotes, peer-reviewed research papers and a three-track shared task, bringing academic research and industrial practice into one forum.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
+<a href="call-for-papers.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 6px; background: #0156AA; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Call for Papers</a>
+<a href="shared-tasks.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 6px; border: 1.5px solid #0156AA; color: #0156AA; text-decoration: none; font-weight: 600; font-size: 16px">Shared Tasks</a>
+</div>
+</div>
+
+<figure style="flex: 0 1 380px; min-width: 0; margin: 0 0 0 auto; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 10px; padding: 18px 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap">
+<span style="font-size: 13px; font-weight: 700">Figure 1. Binary vs. fine-grained detection</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #5A616B">interactive</span>
+</div>
+<p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 18px; line-height: 1.55"><sc-for list="{{tokens}}" as="tok" hint-placeholder-count="12"><span style="padding: 2px 0; border-radius: 4px; background-color: {{tok.bg}}; text-decoration-line: {{tok.ul}}; text-decoration-color: #E39B1B; text-decoration-thickness: 2px; text-underline-offset: 5px; transition: background-color 450ms ease">{{tok.text}}</span></sc-for></p>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px">
+<sc-if value="{{isBinary}}" hint-placeholder-val="{{true}}">
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 12px; border-top: 1px dashed #CECFD1">
+<div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-weight: 600; font-size: 14.5px">
+<span style="color: #8F5300">Human</span>
+<span aria-hidden="true" style="position: relative; display: inline-block; width: 52px; height: 26px; border-radius: 999px; background: #0156AA"><span style="position: absolute; right: 3px; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: #FFFFFF"></span></span>
+<span style="color: #0156AA">AI</span>
+<span style="margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12.5px; font-weight: 500">p(AI) = 0.51</span>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3B414B">A binary detector labels this text as AI-generated and stops there. It cannot say which parts a model touched, or that the events described are real.</p>
+<button onClick="{{lookCloser}}" style="align-self: flex-start; min-height: 44px; padding: 0 18px; border-radius: 6px; border: 0; background: #0156AA; color: #FFFFFF; font-size: 14px; font-weight: 600; cursor: pointer">Look closer</button>
+</div>
+</sc-if>
+<sc-if value="{{isSpectrum}}" hint-placeholder-val="{{false}}">
+<div class="unfold" style="display: flex; flex-direction: column; gap: 10px; padding-top: 12px; border-top: 1px dashed #CECFD1">
+<div role="group" aria-label="Choose an authorship version" style="position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<div aria-hidden="true" style="position: absolute; left: 10%; right: 10%; top: 50%; height: 3px; margin-top: -1.5px; border-radius: 2px; background: linear-gradient(90deg, #E39B1B, #0156AA)"></div>
+<sc-for list="{{versionBtns}}" as="v" hint-placeholder-count="3">
+<button onClick="{{v.pick}}" aria-pressed="{{v.pressed}}" style="position: relative; min-height: 44px; padding: 4px 6px; border-radius: 999px; border: 1.5px solid #0156AA; background: {{v.bg}}; color: {{v.fg}}; font-size: 12.5px; font-weight: 600; line-height: 1.15; cursor: pointer; transition: background-color 200ms ease, color 200ms ease">{{v.label}}</button>
+</sc-for>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45"><strong>{{verdict}}</strong> {{summary}}</p>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<sc-for list="{{notes}}" as="n" hint-placeholder-count="3">
+<p style="margin: 0; padding-left: 10px; border-left: 2px solid #CECFD1; font-size: 13px; line-height: 1.45; color: #3B414B">{{n.text}}</p>
+</sc-for>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: #5A616B">
+<span style="display: inline-flex; align-items: center; gap: 6px"><span aria-hidden="true" style="display: inline-block; width: 18px; height: 10px; border-radius: 3px; background: rgba(1, 86, 170, 0.4)"></span>Reads as model-written</span>
+<span style="display: inline-flex; align-items: center; gap: 6px"><span aria-hidden="true" style="display: inline-block; width: 18px; height: 2px; background: #E39B1B"></span>Trace of a human hand</span>
+</div>
+</div>
+</sc-if>
+<figcaption style="font-size: 11.5px; line-height: 1.4; color: #5A616B">Illustrative example with hand-set scores, not real detector output.</figcaption>
+</div>
+</figure>
+</div>
+</section>
+
+<section id="news" style="padding-top: clamp(48px, 6vw, 72px)">
+<h2 style="margin: 0 0 8px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">News</h2>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
+<tbody>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 16px 32px 16px 12px; text-align: left; font-weight: 700; white-space: nowrap; vertical-align: top">[Date TBD]</th><td style="padding: 16px 12px">Website is up!</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 16px 32px 16px 12px; text-align: left; font-weight: 700; white-space: nowrap; vertical-align: top">[Date TBD]</th><td style="padding: 16px 12px"><a href="call-for-papers.html" style="font-weight: 600">First Call for Papers</a> is posted.</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 16px 32px 16px 12px; text-align: left; font-weight: 700; white-space: nowrap; vertical-align: top">[Date TBD]</th><td style="padding: 16px 12px"><a href="shared-tasks.html" style="font-weight: 600">Shared task registration</a> is open.</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="dates" style="padding-top: clamp(48px, 6vw, 72px)">
+<h2 style="margin: 0 0 8px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">Important Dates</h2>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
+<tbody>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">First call for papers</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Shared task data release</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Direct paper submission deadline</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">ARR commitment deadline</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Notification of acceptance</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Camera-ready deadline</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 700">Workshop day</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 700">[TBD], May 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1; color: #5A616B"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">COLING 2027 virtual conference</th><td style="padding: 14px 12px; white-space: nowrap">Thursday – Friday</td><td style="padding: 14px 12px; white-space: nowrap">May 6–7, 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1; color: #5A616B"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">COLING 2027 main conference</th><td style="padding: 14px 12px; white-space: nowrap">Sunday – Friday</td><td style="padding: 14px 12px; white-space: nowrap">May 9–14, 2027</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 18px 0 0; font-size: 16px; font-weight: 700">All deadlines are 11:59 pm UTC-12h (anywhere on earth).</p>
+<p style="margin: 8px 0 0; font-size: 16px">Submission details are in the <a href="call-for-papers.html" style="font-weight: 600">Call for Papers</a>; shared task timelines are on the <a href="shared-tasks.html" style="font-weight: 600">Shared Tasks</a> page.</p>
+</section>
+
+<section id="topics" style="padding-top: clamp(48px, 6vw, 72px)">
+<h2 style="margin: 0 0 24px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">Research Directions</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 28px 56px; align-items: flex-start">
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 17px; line-height: 1.7">The workshop is organized around five directions grounded in practical needs. We picture them as a stack: reliable detection is the foundation, and each layer above it addresses a question that deployment raises and a binary label cannot answer.</p>
+<p style="margin: 0; font-size: 14px; color: #5A616B">Select a layer to read its description.</p>
+</div>
+<div style="flex: 0 1 500px; min-width: 0; margin-left: auto; display: flex; flex-direction: column; gap: 5px">
+<sc-for list="{{layers}}" as="l" hint-placeholder-count="5">
+<div style="margin-left: {{l.inset}}; margin-right: {{l.inset}}">
+<button onClick="{{l.toggle}}" aria-expanded="{{l.expanded}}" style="width: 100%; min-height: 44px; padding: 8px 16px; border-radius: 8px; border: 1px solid {{l.border}}; background: {{l.bg}}; color: {{l.fg}}; display: flex; align-items: center; gap: 12px; text-align: left; cursor: pointer; transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease">
+<span style="flex: 1; font-size: 14.5px; font-weight: 600; line-height: 1.25">{{l.name}}</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; white-space: nowrap; opacity: 0.8">{{l.role}}</span>
+</button>
+<sc-if value="{{l.open}}" hint-placeholder-val="{{false}}">
+<p class="rise" style="margin: 8px 4px 8px; font-size: 14px; line-height: 1.6; color: #3B414B">{{l.desc}}</p>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section id="demo" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">Interactive Examples</h2>
+<p style="margin: 0 0 20px; font-size: 17px; line-height: 1.7; max-width: 52em">Each shared task track targets a question that a binary detector cannot answer. Try one example from each before reading the <a href="shared-tasks.html" style="font-weight: 600">task descriptions</a>.</p>
+<div id="game" style="max-width: 880px; background: #0156AA; color: #FFFFFF; border-radius: 12px; padding: clamp(20px, 2.8vw, 30px); display: flex; flex-direction: column; gap: 16px; box-shadow: 0 24px 48px -32px rgba(1, 40, 90, 0.55)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.2)">
+<div style="display: flex; flex-direction: column; gap: 3px">
+<h3 style="margin: 0; font-size: 19px; font-weight: 700">Who wrote this?</h3>
+<p style="margin: 0; font-size: 12.5px; color: #CFE3F7">One example per track, written for this page; not drawn from task data.</p>
+</div>
+<div style="display: flex; align-items: center; gap: 10px">
+<div aria-hidden="true" style="display: flex; gap: 4px"><sc-for list="{{segs}}" as="g" hint-placeholder-count="3"><span style="display: block; width: 26px; height: 4px; border-radius: 2px; background: {{g.bg}}; transition: background-color 300ms ease"></span></sc-for></div>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11.5px; color: #CFE3F7">{{progress}}</span>
+</div>
+</div>
+<sc-if value="{{step1}}" hint-placeholder-val="{{true}}">
+<div class="rise" style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #E6F0FA"><strong style="color: #FFFFFF">Track 1.</strong> Is this human-written, LLM-refined, or LLM-generated?</p>
+<blockquote style="margin: 0; padding: 14px 18px; border-radius: 8px; background: #FFFFFF; color: #2A313C; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.6">Our method is simple: we rewrite the text once and measure how much changes. Notably, this approach not only enhances robustness but also offers valuable insights into the nuanced dynamics of authorship.</blockquote>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 8px">
+<sc-for list="{{opts1}}" as="o" hint-placeholder-count="3">
+<button onClick="{{o.pick}}" disabled="{{o.disabled}}" style="min-height: 44px; padding: 10px 14px; border-radius: 8px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #2A313C; font-size: 14.5px; font-weight: 600; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px">
+<span>{{o.label}}</span>
+<sc-if value="{{o.hasMark}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; white-space: nowrap; color: {{o.markColor}}">{{o.mark}}</span></sc-if>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{r1Done}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14.5px; line-height: 1.6"><strong>{{fb1}}</strong> The first sentence reads as a plain human draft; the second carries typical model polish (“notably”, “not only… but also”, “valuable insights”, “nuanced dynamics”). Mixed authorship within one text is the reason Track 1 adds a third label.</p>
+<button onClick="{{next}}" style="align-self: flex-start; min-height: 44px; padding: 0 18px; border-radius: 6px; border: 0; background: #E39B1B; color: #2A313C; font-size: 14.5px; font-weight: 700; cursor: pointer">Next example</button>
+</div>
+</sc-if>
+</div>
+</sc-if>
+<sc-if value="{{step2}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #E6F0FA"><strong style="color: #FFFFFF">Track 2.</strong> One of these is an 8th-century Tang poem; the other was generated by a language model. Which is the original?</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<div style="flex: 1 1 200px; padding: 14px 18px; border-radius: 8px; background: #FFFFFF; color: #2A313C">
+<p style="margin: 0 0 6px; font-size: 12.5px; color: #5A616B">Poem A</p>
+<p lang="zh" style="margin: 0; font-family: 'Noto Serif SC', 'Songti SC', serif; font-size: 19px; line-height: 1.85; letter-spacing: 0.08em; white-space: pre-line">深山松影静，
+白云自往还。
+鸟归斜照里，
+人在翠微间。</p>
+</div>
+<div style="flex: 1 1 200px; padding: 14px 18px; border-radius: 8px; background: #FFFFFF; color: #2A313C">
+<p style="margin: 0 0 6px; font-size: 12.5px; color: #5A616B">Poem B</p>
+<p lang="zh" style="margin: 0; font-family: 'Noto Serif SC', 'Songti SC', serif; font-size: 19px; line-height: 1.85; letter-spacing: 0.08em; white-space: pre-line">空山不见人，
+但闻人语响。
+返景入深林，
+复照青苔上。</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 8px">
+<sc-for list="{{opts2}}" as="o" hint-placeholder-count="2">
+<button onClick="{{o.pick}}" disabled="{{o.disabled}}" style="min-height: 44px; padding: 10px 14px; border-radius: 8px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #2A313C; font-size: 14.5px; font-weight: 600; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px">
+<span>{{o.label}}</span>
+<sc-if value="{{o.hasMark}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; white-space: nowrap; color: {{o.markColor}}">{{o.mark}}</span></sc-if>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{r2Done}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14.5px; line-height: 1.6"><strong>{{fb2}}</strong> Poem B is Wang Wei’s <span lang="zh">《鹿柴》</span>. Poem A was generated for this page: it assembles conventional images (pine shade, white clouds, homing birds) without a perceptual turn, whereas Wang Wei’s poem hinges on voices heard in an empty mountain and light returning to the moss. Classical-style generation is fluent at the surface level, which motivates Track 2.</p>
+<button onClick="{{next}}" style="align-self: flex-start; min-height: 44px; padding: 0 18px; border-radius: 6px; border: 0; background: #E39B1B; color: #2A313C; font-size: 14.5px; font-weight: 700; cursor: pointer">Next example</button>
+</div>
+</sc-if>
+</div>
+</sc-if>
+<sc-if value="{{step3}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #E6F0FA"><strong style="color: #FFFFFF">Track 3.</strong> One sentence claims more than its evidence supports. Which one?</p>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<sc-for list="{{opts3}}" as="o" hint-placeholder-count="4">
+<button onClick="{{o.pick}}" disabled="{{o.disabled}}" style="min-height: 44px; padding: 10px 14px; border-radius: 8px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #2A313C; font-family: 'Newsreader', Georgia, serif; font-size: 16px; line-height: 1.45; font-weight: 400; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px">
+<span>{{o.label}}</span>
+<sc-if value="{{o.hasMark}}" hint-placeholder-val="{{false}}"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; white-space: nowrap; color: {{o.markColor}}">{{o.mark}}</span></sc-if>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{r3Done}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 14.5px; line-height: 1.6"><strong>{{fb3}}</strong> The evidence covers one language and one domain, while the claim extends to all of them. This evidence–statement mismatch is what Track 3 asks systems to identify.</p>
+<button onClick="{{next}}" style="align-self: flex-start; min-height: 44px; padding: 0 18px; border-radius: 6px; border: 0; background: #E39B1B; color: #2A313C; font-size: 14.5px; font-weight: 700; cursor: pointer">See your result</button>
+</div>
+</sc-if>
+</div>
+</sc-if>
+<sc-if value="{{step4}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 32px; font-weight: 700; line-height: 1">{{scoreLine}}</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #E6F0FA; max-width: 40em">Each answer came with a reason. Most detectors still return only a label. The shared tasks invite systems that can do more.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<a href="shared-tasks.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 6px; background: #E39B1B; color: #2A313C; text-decoration: none; font-weight: 700; font-size: 14.5px">See the shared tasks</a>
+<button onClick="{{replay}}" style="min-height: 44px; padding: 0 18px; border-radius: 6px; border: 1.5px solid #FFFFFF; background: transparent; color: #FFFFFF; font-size: 14.5px; font-weight: 600; cursor: pointer">Start again</button>
+</div>
+</div>
+</sc-if>
+</div>
+</section>
+
+</main>
+
+<div aria-hidden="true" style="overflow: hidden; line-height: 0; margin-top: clamp(48px, 6vw, 72px)">
+<svg width="100%" height="80" viewBox="0 0 1440 96" preserveAspectRatio="xMidYMid slice">
+<defs>
+<path id="homewv1" d="M-20 22 Q 70 -6 160 22 T 340 22 T 520 22 T 700 22 T 880 22 T 1060 22 T 1240 22 T 1420 22 T 1600 22"></path>
+<path id="homewv2" d="M-110 52 Q -20 24 70 52 T 250 52 T 430 52 T 610 52 T 790 52 T 970 52 T 1150 52 T 1330 52 T 1510 52"></path>
+<path id="homewv3" d="M-20 82 Q 70 54 160 82 T 340 82 T 520 82 T 700 82 T 880 82 T 1060 82 T 1240 82 T 1420 82 T 1600 82"></path>
+</defs>
+<rect width="1440" height="96" fill="#EEEEEE"></rect>
+<use href="#homewv1" stroke="#2A313C" stroke-width="18" fill="none"></use>
+<use href="#homewv2" stroke="#2A313C" stroke-width="18" fill="none"></use>
+<use href="#homewv3" stroke="#2A313C" stroke-width="18" fill="none"></use>
+<text fill="#EEEEEE" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1.5" dy="3.5"><textPath href="#homewv1">01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000 01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101</textPath></text>
+<text fill="#EEEEEE" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1.5" dy="3.5"><textPath href="#homewv2">01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000 01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000</textPath></text>
+<text fill="#EEEEEE" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1.5" dy="3.5"><textPath href="#homewv3">01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000 01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110</textPath></text>
+</svg>
+</div>
+<footer style="background: #2A313C; color: #D5D8DD">
+<div style="max-width: 1100px; margin: 0 auto; padding: 32px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; gap: 12px 40px; align-items: center; font-size: 15px">
+<span style="font-weight: 700; color: #FFFFFF; font-size: 17px; margin-right: auto">AIGCTrustDetect, a workshop of COLING 2027</span>
+<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">Contact the organizers</a>
+<a href="https://2027.coling-iccl.org/" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">COLING 2027 main site</a>
+</div>
+</footer>
+
+</div>
+</template>
+<script src="assets/js/runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { mode: 'binary', version: 'refined', layer: 4, step: 1, a1: null, a2: null, a3: null, menu: null };
+  }
+
+  versions() {
+    return {
+      human: {
+        label: 'Human-written',
+        verdict: 'Human-written.',
+        summary: 'Informal, specific and unpolished.',
+        tokens: [['got ', 0.05, 0], ['to ', 0.05, 0], ['macao ', 0.05, 1], ['late. ', 0.1, 0], ['ate ', 0.05, 0], ['2 ', 0.05, 1], ['egg ', 0.05, 0], ['tarts ', 0.05, 0], ['on ', 0.1, 0], ['the ', 0.1, 0], ['ferry ', 0.1, 0], ['and ', 0.15, 0], ['THEN ', 0, 1], ['realised ', 0.2, 0], ['the ', 0.1, 0], ['poster ', 0.1, 0], ['was ', 0.1, 0], ['still ', 0.1, 0], ['at ', 0.15, 0], ['the ', 0.1, 0], ['hotel ', 0.1, 0], ['lol', 0, 1]],
+        notes: [
+          'Irregular casing and fragments: hard to fake, easy to “fix”.',
+          'A specific detail with no lesson attached.'
+        ]
+      },
+      refined: {
+        label: 'LLM-refined',
+        verdict: 'LLM-refined.',
+        summary: 'Human content, machine surface.',
+        tokens: [['I ', 0.2, 0], ['arrived ', 0.35, 0], ['in ', 0.1, 0], ['Macau ', 0.05, 0], ['late ', 0.15, 0], ['and, ', 0.45, 0], ['after ', 0.55, 0], ['enjoying ', 0.9, 0], ['two ', 0.1, 1], ['egg ', 0.05, 1], ['tarts ', 0.05, 1], ['on ', 0.1, 0], ['the ', 0.1, 0], ['ferry, ', 0.2, 0], ['realised ', 0.6, 0], ['my ', 0.1, 0], ['poster ', 0.1, 1], ['was ', 0.2, 0], ['still ', 0.25, 0], ['at ', 0.3, 0], ['the ', 0.1, 0], ['hotel.', 0.2, 0]],
+        notes: [
+          '“Enjoying” was added in revision; the draft never said it.',
+          'Fragments merged into one polished sentence.',
+          'Specific details survive from the human draft.'
+        ]
+      },
+      generated: {
+        label: 'LLM-generated',
+        verdict: 'LLM-generated.',
+        summary: 'Fluent, but with no verifiable content.',
+        tokens: [['Macau ', 0.2, 0], ['offers ', 0.6, 0], ['a ', 0.4, 0], ['vibrant ', 0.95, 0], ['blend ', 0.9, 0], ['of ', 0.5, 0], ['cultures, ', 0.7, 0], ['where ', 0.6, 0], ['every ', 0.75, 0], ['visit ', 0.5, 0], ['becomes ', 0.7, 0], ['a ', 0.5, 0], ['memorable ', 0.9, 0], ['journey ', 0.95, 0], ['of ', 0.5, 0], ['discovery ', 0.85, 0], ['and ', 0.6, 0], ['delight.', 0.9, 0]],
+        notes: [
+          'High-likelihood stock phrases: “vibrant blend”, “memorable journey”.',
+          'Nothing specific enough to check or falsify.'
+        ]
+      }
+    };
+  }
+
+  options(labels, answer, key) {
+    const chosen = this.state[key];
+    const answered = chosen !== null;
+    return labels.map((label, i) => {
+      let border = '#FFFFFF', bg = '#FFFFFF', mark = '', markColor = '#2A313C';
+      if (answered && i === answer) { border = '#7FC3F0'; bg = '#DCEBF8'; mark = 'Answer'; markColor = '#0156AA'; }
+      else if (answered && i === chosen) { border = '#E39B1B'; bg = '#FBE9C8'; mark = 'Your pick'; markColor = '#8F5300'; }
+      return {
+        label: label,
+        pick: () => { if (this.state[key] === null) this.setState({ [key]: i }); },
+        disabled: answered,
+        border: border, bg: bg, mark: mark, markColor: markColor, hasMark: mark !== ''
+      };
+    });
+  }
+
+  renderVals() {
+    const s = this.state;
+    const V = this.versions();
+    const spectrum = s.mode === 'spectrum';
+    const cur = V[spectrum ? s.version : 'refined'];
+
+    const tokens = cur.tokens.map((t) => ({
+      text: t[0],
+      bg: spectrum ? 'rgba(1, 86, 170, ' + (t[1] * 0.42).toFixed(2) + ')' : 'transparent',
+      ul: spectrum && t[2] ? 'underline' : 'none'
+    }));
+
+    const versionBtns = ['human', 'refined', 'generated'].map((k) => {
+      const on = k === s.version;
+      return {
+        label: V[k].label,
+        pick: () => this.setState({ version: k }),
+        pressed: on ? 'true' : 'false',
+        bg: on ? '#0156AA' : '#FFFFFF',
+        fg: on ? '#FFFFFF' : '#0156AA'
+      };
+    });
+
+    const layerData = [
+      { name: 'Hierarchical and differentiated governance', role: 'deployment', desc: 'Different application settings carry different stakes. Tiered governance lets each deployment, from education to journalism to content platforms, choose a proportionate response rather than share a single threshold.' },
+      { name: 'Hallucination, quality and factuality', role: 'content', desc: 'Authorship is only part of the question. Whether generated content is accurate, supported and proportionate is a largely underexplored problem, covering quality assessment and factuality verification.' },
+      { name: 'Cross-lingual generalization', role: 'coverage', desc: 'Detection research remains largely English-centric. We seek methods that extend to low-resource languages at low cost, without building each language from scratch.' },
+      { name: 'Detection in complex generation scenarios', role: 'robustness', desc: 'Real-world content is paraphrased, mixed with human writing and sometimes deliberately disguised. Detectors must adapt to how content is actually produced and remain robust to evasion.' },
+      { name: 'Reliable and explainable detection', role: 'foundation', desc: 'A bare score is difficult to act on and difficult to contest. Detection results should expose their evidence so that those who rely on them can understand and verify them.' }
+    ];
+    const layers = layerData.map((l, i) => {
+      const open = s.layer === i;
+      return {
+        name: l.name, role: l.role, desc: l.desc, open: open,
+        expanded: open ? 'true' : 'false',
+        toggle: () => this.setState({ layer: this.state.layer === i ? -1 : i }),
+        inset: 'calc(min(3vw, 30px) * ' + (4 - i) + ')',
+        bg: open ? '#0156AA' : ['#F2F7FC', '#E6F0FA', '#D9E9F7', '#CCE1F4', '#BFD9F1'][i],
+        border: open ? '#0156AA' : '#A9C8E8',
+        fg: open ? '#FFFFFF' : '#2A313C'
+      };
+    });
+
+    const score = [s.a1 === 1, s.a2 === 1, s.a3 === 2].filter(Boolean).length;
+    const toggleMenu = (name) => () => this.setState({ menu: this.state.menu === name ? null : name });
+
+    return {
+      callsOpen: s.menu === 'calls',
+      committeeOpen: s.menu === 'committee',
+      callsExpanded: s.menu === 'calls' ? 'true' : 'false',
+      committeeExpanded: s.menu === 'committee' ? 'true' : 'false',
+      toggleCalls: toggleMenu('calls'),
+      toggleCommittee: toggleMenu('committee'),
+      closeMenu: () => this.setState({ menu: null }),
+
+      isBinary: !spectrum,
+      isSpectrum: spectrum,
+      tokens: tokens,
+      versionBtns: versionBtns,
+      verdict: cur.verdict,
+      summary: cur.summary,
+      notes: cur.notes.map((t) => ({ text: t })),
+      lookCloser: () => this.setState({ mode: 'spectrum', version: 'refined' }),
+
+      layers: layers,
+
+      progress: s.step < 4 ? s.step + ' / 3' : 'Done',
+      segs: [1, 2, 3].map((n) => ({ bg: (s.step > n) ? '#E39B1B' : (s.step === n ? '#FFFFFF' : 'rgba(255, 255, 255, 0.3)') })),
+      step1: s.step === 1, step2: s.step === 2, step3: s.step === 3, step4: s.step === 4,
+      opts1: this.options(['Human-written', 'LLM-refined', 'LLM-generated'], 1, 'a1'),
+      opts2: this.options(['Poem A is the original', 'Poem B is the original'], 1, 'a2'),
+      opts3: this.options([
+        'We evaluate our detector on 2,000 English news articles.',
+        'It reaches 94% accuracy on this test set.',
+        'These results prove that it works reliably for all languages and domains.',
+        'Future work will extend the evaluation to social media text.'
+      ], 2, 'a3'),
+      r1Done: s.a1 !== null, r2Done: s.a2 !== null, r3Done: s.a3 !== null,
+      fb1: s.a1 === 1 ? 'Correct: LLM-refined.' : 'The answer is LLM-refined.',
+      fb2: s.a2 === 1 ? 'Correct: Poem B is the original.' : 'The original is Poem B.',
+      fb3: s.a3 === 2 ? 'Correct: the third sentence.' : 'The answer is the third sentence.',
+      next: () => this.setState({ step: this.state.step + 1 }),
+      replay: () => this.setState({ step: 1, a1: null, a2: null, a3: null }),
+      scoreLine: score + ' of 3 correct'
+    };
+  }
+}
+AIGC.mount(Component);
+</script>
+</body>
+</html>

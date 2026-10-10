@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIGCTrustDetect at COLING 2027: Shared Tasks</title>
+<meta name="description" content="The 1st Workshop on AI-Generated Content Detection and Trustworthy Governance (AIGCTrustDetect) at COLING 2027, Macau.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Noto+Serif+SC:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#EEEEEE}
+a{color:#D50100}a:hover{color:#8F0000}
+:focus-visible{outline:3px solid #0156AA;outline-offset:3px}
+button{font-family:inherit}
+@keyframes unfold{from{transform:scaleX(.18);opacity:0}to{transform:scaleX(1);opacity:1}}
+.unfold{animation:unfold 700ms cubic-bezier(.2,.8,.2,1) both;transform-origin:50% 0}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.rise{animation:rise 420ms ease both}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<template id="page-template">
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif; color: #2A313C; background: #EEEEEE; min-height: 100vh">
+<header style="background: #EEEEEE; border-bottom: 1px solid #DDDEE0">
+<div style="max-width: 1100px; margin: 0 auto; padding: 10px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px">
+<div style="display: flex; align-items: center; gap: 16px; margin-right: auto">
+<a href="https://2027.coling-iccl.org/" aria-label="COLING 2027 main conference website" style="display: inline-flex; align-items: center; min-height: 48px"><img src="assets/images/coling2027-logo.png" alt="COLING 2027, May 9–14, 2027, Macao, China" style="display: block; height: 60px; width: auto"></a>
+<span aria-hidden="true" style="width: 1px; height: 44px; background: #CECFD1"></span>
+<a href="index.html" style="display: inline-flex; flex-direction: column; justify-content: center; min-height: 48px; color: #2A313C; text-decoration: none">
+<span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 19px"><svg width="30" height="18" viewBox="0 0 34 20" fill="none" aria-hidden="true"><rect x="1" y="1" width="32" height="18" rx="9" stroke="#2A313C" stroke-width="2"></rect><circle cx="10" cy="10" r="4" fill="#E39B1B"></circle><circle cx="24" cy="10" r="4" fill="#0156AA"></circle><line x1="17" y1="4" x2="17" y2="16" stroke="#2A313C" stroke-width="2" stroke-dasharray="2 2"></line></svg>AIGCTrustDetect</span>
+<span style="font-size: 13px; color: #5A616B">Workshop at COLING 2027</span>
+</a>
+</div>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; font-size: 16px">
+<a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Home</a>
+<div style="position: relative">
+<button onClick="{{toggleCalls}}" aria-expanded="{{callsExpanded}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid #0156AA; background: transparent; color: #2A313C; font-size: 16px; font-weight: 700; cursor: pointer">Calls<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0 L10 0 L5 6 Z" fill="#2A313C"></path></svg></button>
+<sc-if value="{{callsOpen}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="position: absolute; top: 100%; left: -12px; z-index: 30; min-width: 210px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 6px; box-shadow: 0 12px 28px -12px rgba(42, 49, 60, 0.35); padding: 6px 0; display: flex; flex-direction: column">
+<a href="call-for-papers.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Call for Papers</a>
+<a href="shared-tasks.html" aria-current="page" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #0156AA; font-weight: 700; text-decoration: none">Shared Tasks</a>
+</div>
+</sc-if>
+</div>
+<div style="position: relative">
+<button onClick="{{toggleCommittee}}" aria-expanded="{{committeeExpanded}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #2A313C; font-size: 16px; font-weight: 400; cursor: pointer">Committee<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0 L10 0 L5 6 Z" fill="#2A313C"></path></svg></button>
+<sc-if value="{{committeeOpen}}" hint-placeholder-val="{{false}}">
+<div class="rise" style="position: absolute; top: 100%; left: -12px; z-index: 30; min-width: 210px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 6px; box-shadow: 0 12px 28px -12px rgba(42, 49, 60, 0.35); padding: 6px 0; display: flex; flex-direction: column">
+<a href="organizers.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Organizers</a>
+<a href="program-committee.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Program Committee</a>
+</div>
+</sc-if>
+</div>
+<a href="speakers.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Speakers</a>
+<a href="program.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Program</a>
+<a href="participants-info.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Participants Info</a>
+<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Contact</a>
+</nav>
+</div>
+</header>
+<section aria-label="Page banner" style="background-color: #0055A6; background-image: linear-gradient(90deg, rgba(0, 60, 130, 0.55) 0%, rgba(0, 60, 130, 0.25) 45%, rgba(0, 60, 130, 0) 70%), url('assets/images/coling2027-banner.jpg'), linear-gradient(90deg, #0055A6 0%, #0063B1 50%, #0070BC 100%); background-size: cover, 100% auto, cover; background-position: center, center bottom, center; background-repeat: no-repeat; min-height: clamp(200px, 19vw, 280px); color: #FFFFFF; display: flex">
+<div style="width: 100%; max-width: 1100px; margin: 0 auto; padding: clamp(28px, 3.4vw, 44px) clamp(20px, 4vw, 40px) 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-shadow: 0 2px 6px rgba(0, 20, 60, 0.35)">
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #D9ECFF">AIGCTrustDetect @ COLING 2027</p>
+<h1 style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; font-weight: 700">Shared Tasks</h1>
+</div>
+</section>
+<main style="max-width: 1100px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px)">
+<section id="overview" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Overview</h2>
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 52em">
+<p style="margin: 0; font-size: 17px; line-height: 1.7">AIGCTrustDetect hosts a three-track shared task benchmark on trustworthy AIGC detection and governance. The tracks move beyond binary labels toward fine-grained, cross-lingual and content-level evaluation.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7">The organizing team previously ran the shared tasks on LLM-generated text detection at NLPCC 2025 (Task 1) and NLPCC 2026 (Task 6), which together attracted more than 120 participating teams and resulted in six accepted system description papers, as well as the NLPCC 2026 shared task on the reliability of AI-assisted scientific reports (Task 10).</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5A616B">Want a feel for each track first? The <a href="index.html" style="font-weight: 600">Home page</a> has one interactive example per track.</p>
+</div>
+</section>
+<section id="track1" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700"><span style="color: #0156AA">Track 1.</span> Multilingual LLM-Generated Text Detection</h2>
+<p style="margin: 0 0 18px; font-size: 17px; line-height: 1.7; max-width: 52em">This track covers eight languages and performs fine-grained classification across human-written, LLM-generated and LLM-refined texts. It evaluates the robustness and cross-lingual generalization of detection methods under real-world deployment scenarios.</p>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 16.5px; line-height: 1.55">
+<tbody>
+<tr style="border-top: 1px solid #CECFD1; border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Task</th><td style="padding: 12px 0">Three-way classification: human-written, LLM-generated, LLM-refined</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Languages</th><td style="padding: 12px 0">Eight languages [list TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Data</th><td style="padding: 12px 0">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Evaluation</th><td style="padding: 12px 0">[metric TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Registration</th><td style="padding: 12px 0"><a href="shared-tasks.html">[link TBD]</a></td></tr>
+</tbody>
+</table>
+</div>
+<div style="margin-top: 20px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 10px; overflow: hidden">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px 16px; background: #F6F8FA; border-bottom: 1px solid #CECFD1">
+<span style="font-size: 13.5px; font-weight: 700">Sample instance</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #5A616B">illustrative; official format released with the data</span>
+</div>
+<div style="padding: 16px 18px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 12.5px; font-weight: 600; color: #5A616B">Input</p>
+<p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.6">We ran the baseline twice because the first run crashed at epoch 3; the numbers below are from the second run.</p>
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding-top: 12px; border-top: 1px dashed #CECFD1">
+<button onClick="{{toggle1}}" aria-expanded="{{exp1}}" style="min-height: 44px; padding: 0 16px; border-radius: 6px; border: 1.5px solid #0156AA; background: {{btnBg1}}; color: {{btnFg1}}; font-size: 14px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease, color 200ms ease">{{btnLabel1}}</button>
+<sc-if value="{{show1}}" hint-placeholder-val="{{false}}">
+<span class="rise" style="display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 14px"><span style="color: #5A616B">Expected output</span><strong style="padding: 5px 12px; border-radius: 999px; background: #DCEBF8; color: #0156AA">Human-written</strong></span>
+</sc-if>
+</div>
+<sc-if value="{{show1}}" hint-placeholder-val="{{false}}">
+<p class="rise" style="margin: 0; font-size: 14px; line-height: 1.6; color: #3B414B">A specific, slightly awkward detail (a crash at epoch 3) and a plain account of what happened, with no polish added. In the real task, the same content may also appear as LLM-generated or LLM-refined text.</p>
+</sc-if>
+</div>
+</div>
+</section>
+<section id="track2" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700"><span style="color: #0156AA">Track 2.</span> Multilingual LLM-Generated Archaic Text Detection</h2>
+<p style="margin: 0 0 18px; font-size: 17px; line-height: 1.7; max-width: 52em">This track targets AI-generated texts written in classical and archaic languages, filling a gap in content governance for historical, literary and classical-style corpora.</p>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 16.5px; line-height: 1.55">
+<tbody>
+<tr style="border-top: 1px solid #CECFD1; border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Task</th><td style="padding: 12px 0">Detection of AI-generated text in classical and archaic languages [label set TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Languages</th><td style="padding: 12px 0">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Data</th><td style="padding: 12px 0">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Evaluation</th><td style="padding: 12px 0">[metric TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Registration</th><td style="padding: 12px 0"><a href="shared-tasks.html">[link TBD]</a></td></tr>
+</tbody>
+</table>
+</div>
+<div style="margin-top: 20px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 10px; overflow: hidden">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px 16px; background: #F6F8FA; border-bottom: 1px solid #CECFD1">
+<span style="font-size: 13.5px; font-weight: 700">Sample instance</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #5A616B">illustrative; official format released with the data</span>
+</div>
+<div style="padding: 16px 18px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 12.5px; font-weight: 600; color: #5A616B">Input</p>
+<p lang="zh" style="margin: 0; font-family: 'Noto Serif SC', 'Songti SC', serif; font-size: 19px; line-height: 1.85; letter-spacing: 0.08em; white-space: pre-line">秋风吹古道，
+落叶满空山。
+独坐听泉响，
+悠然心自闲。</p>
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding-top: 12px; border-top: 1px dashed #CECFD1">
+<button onClick="{{toggle2}}" aria-expanded="{{exp2}}" style="min-height: 44px; padding: 0 16px; border-radius: 6px; border: 1.5px solid #0156AA; background: {{btnBg2}}; color: {{btnFg2}}; font-size: 14px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease, color 200ms ease">{{btnLabel2}}</button>
+<sc-if value="{{show2}}" hint-placeholder-val="{{false}}">
+<span class="rise" style="display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 14px"><span style="color: #5A616B">Expected output</span><strong style="padding: 5px 12px; border-radius: 999px; background: #DCEBF8; color: #0156AA">LLM-generated</strong></span>
+</sc-if>
+</div>
+<sc-if value="{{show2}}" hint-placeholder-val="{{false}}">
+<p class="rise" style="margin: 0; font-size: 14px; line-height: 1.6; color: #3B414B">Fluent and correctly rhymed, but assembled from stock images (autumn wind, fallen leaves, a mountain spring) with no particular moment behind them. This poem was generated for this page.</p>
+</sc-if>
+</div>
+</div>
+</section>
+<section id="track3" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700"><span style="color: #0156AA">Track 3.</span> LLM-Generated Text Quality Assessment</h2>
+<p style="margin: 0 0 18px; font-size: 17px; line-height: 1.7; max-width: 52em">This track focuses on overstated claims and evidence–statement mismatches. Participants identify exaggerated assertions, unsupported arguments and misaligned supporting evidence within AI-generated content.</p>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 16.5px; line-height: 1.55">
+<tbody>
+<tr style="border-top: 1px solid #CECFD1; border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Task</th><td style="padding: 12px 0">Identify overstated claims, unsupported arguments and misaligned evidence</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Annotation</th><td style="padding: 12px 0">[scheme TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Data</th><td style="padding: 12px 0">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Evaluation</th><td style="padding: 12px 0">[metric TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 20px 12px 0; text-align: left; font-weight: 600; vertical-align: top; width: 170px">Registration</th><td style="padding: 12px 0"><a href="shared-tasks.html">[link TBD]</a></td></tr>
+</tbody>
+</table>
+</div>
+<div style="margin-top: 20px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 10px; overflow: hidden">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px 16px; background: #F6F8FA; border-bottom: 1px solid #CECFD1">
+<span style="font-size: 13.5px; font-weight: 700">Sample instance</span>
+<span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; color: #5A616B">illustrative; official format released with the data</span>
+</div>
+<div style="padding: 16px 18px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 12.5px; font-weight: 600; color: #5A616B">Input</p>
+<p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.7"><span>Our detector was tested on student essays from one university. </span><span>It flagged 9 of the 10 AI-written essays. </span><span style="padding: 2px 0; border-radius: 3px; background-color: {{hl3}}; text-decoration-line: {{ul3}}; text-decoration-color: #E39B1B; text-decoration-thickness: 2px; text-underline-offset: 5px; transition: background-color 300ms ease">It can therefore be trusted to police academic integrity worldwide.</span></p>
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding-top: 12px; border-top: 1px dashed #CECFD1">
+<button onClick="{{toggle3}}" aria-expanded="{{exp3}}" style="min-height: 44px; padding: 0 16px; border-radius: 6px; border: 1.5px solid #0156AA; background: {{btnBg3}}; color: {{btnFg3}}; font-size: 14px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease, color 200ms ease">{{btnLabel3}}</button>
+<sc-if value="{{show3}}" hint-placeholder-val="{{false}}">
+<span class="rise" style="display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 14px"><span style="color: #5A616B">Expected output</span><strong style="padding: 5px 12px; border-radius: 999px; background: #DCEBF8; color: #0156AA">Overstated claim: sentence 3</strong></span>
+</sc-if>
+</div>
+<sc-if value="{{show3}}" hint-placeholder-val="{{false}}">
+<p class="rise" style="margin: 0; font-size: 14px; line-height: 1.6; color: #3B414B">The evidence comes from one university and ten essays; the claim covers every institution in the world. That evidence–statement mismatch is what Track 3 systems should flag.</p>
+</sc-if>
+</div>
+</div>
+</section>
+<section id="timeline" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Shared Task Timeline</h2>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
+<tbody>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Registration opens</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Training and development data release</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Test data release</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">System output submission deadline</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">System description paper deadline</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 700">Workshop day</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 700">[TBD], May 2027</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 16px 0 0; font-size: 16px; font-weight: 700">All deadlines are 11:59 pm UTC-12h (anywhere on earth).</p>
+</section>
+<section id="papers" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">System Description Papers</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; max-width: 52em">Participating teams are invited to submit system description papers, which will be reviewed and, if accepted, presented in the shared task session at the workshop. Format and page limits: [TBD].</p>
+</section>
+</main>
+<div aria-hidden="true" style="overflow: hidden; line-height: 0; margin-top: clamp(48px, 6vw, 72px)">
+<svg width="100%" height="80" viewBox="0 0 1440 96" preserveAspectRatio="xMidYMid slice">
+<defs>
+<path id="stwv1" d="M-20 22 Q 70 -6 160 22 T 340 22 T 520 22 T 700 22 T 880 22 T 1060 22 T 1240 22 T 1420 22 T 1600 22"></path>
+<path id="stwv2" d="M-110 52 Q -20 24 70 52 T 250 52 T 430 52 T 610 52 T 790 52 T 970 52 T 1150 52 T 1330 52 T 1510 52"></path>
+<path id="stwv3" d="M-20 82 Q 70 54 160 82 T 340 82 T 520 82 T 700 82 T 880 82 T 1060 82 T 1240 82 T 1420 82 T 1600 82"></path>
+</defs>
+<rect width="1440" height="96" fill="#EEEEEE"></rect>
+<use href="#stwv1" stroke="#2A313C" stroke-width="18" fill="none"></use>
+<use href="#stwv2" stroke="#2A313C" stroke-width="18" fill="none"></use>
+<use href="#stwv3" stroke="#2A313C" stroke-width="18" fill="none"></use>
+<text fill="#EEEEEE" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1.5" dy="3.5"><textPath href="#stwv1">01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000 01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101</textPath></text>
+<text fill="#EEEEEE" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1.5" dy="3.5"><textPath href="#stwv2">01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000 01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000</textPath></text>
+<text fill="#EEEEEE" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1.5" dy="3.5"><textPath href="#stwv3">01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110 01100101 00111111 00100000 01101000 01110101 01101101 01100001 01101110 00100000 01101111 01110010 00100000 01101101 01100001 01100011 01101000 01101001 01101110</textPath></text>
+</svg>
+</div>
+<footer style="background: #2A313C; color: #D5D8DD">
+<div style="max-width: 1100px; margin: 0 auto; padding: 32px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; gap: 12px 40px; align-items: center; font-size: 15px">
+<span style="font-weight: 700; color: #FFFFFF; font-size: 17px; margin-right: auto">AIGCTrustDetect, a workshop of COLING 2027</span>
+<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">Contact the organizers</a>
+<a href="https://2027.coling-iccl.org/" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">COLING 2027 main site</a>
+</div>
+</footer>
+</div>
+</template>
+<script src="assets/js/runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menu: null, shown: { 1: false, 2: false, 3: false } };
+  }
+  renderVals() {
+    const s = this.state;
+    const t = (n) => () => this.setState({ menu: this.state.menu === n ? null : n });
+    const menuVals = {
+      callsOpen: s.menu === 'calls',
+      committeeOpen: s.menu === 'committee',
+      callsExpanded: s.menu === 'calls' ? 'true' : 'false',
+      committeeExpanded: s.menu === 'committee' ? 'true' : 'false',
+      toggleCalls: t('calls'),
+      toggleCommittee: t('committee'),
+      closeMenu: () => this.setState({ menu: null })
+    };
+    const vals = {};
+    [1, 2, 3].forEach((n) => {
+      const on = !!s.shown[n];
+      vals['show' + n] = on;
+      vals['exp' + n] = on ? 'true' : 'false';
+      vals['btnLabel' + n] = on ? 'Hide expected output' : 'Show expected output';
+      vals['btnBg' + n] = on ? '#FFFFFF' : '#0156AA';
+      vals['btnFg' + n] = on ? '#0156AA' : '#FFFFFF';
+      vals['toggle' + n] = () => {
+        const next = Object.assign({}, this.state.shown);
+        next[n] = !next[n];
+        this.setState({ shown: next });
+      };
+    });
+    vals.hl3 = s.shown[3] ? 'rgba(227, 155, 27, 0.25)' : 'transparent';
+    vals.ul3 = s.shown[3] ? 'underline' : 'none';
+    return Object.assign({}, menuVals, vals);
+  }
+}
+AIGC.mount(Component);
+</script>
+</body>
+</html>
