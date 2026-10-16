@@ -28,8 +28,4 @@ are driven by the `<script>` block at the bottom of each page plus `assets/js/ru
 
 ## Preview locally
 
-```
-python3 -m http.server 8000
-```
-
-Then open http://localhost:8000.
+Open `index.html` in a browser. Everything is static, so no server is needed.

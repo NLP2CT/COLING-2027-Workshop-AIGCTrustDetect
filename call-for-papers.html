@@ -124,19 +124,49 @@ button{font-family:inherit}
 </section>
 <section id="submission" style="padding-top: clamp(40px, 5vw, 60px)">
 <h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Submission</h2>
-<p style="margin: 0 0 18px; font-size: 17px; line-height: 1.7; max-width: 52em">We invite <strong>long and short papers</strong>, with the <strong>same page limits as the COLING 2027 main conference</strong>, formatted in the COLING 2027 style [template link TBD]. Papers can be submitted directly through <strong>OpenReview</strong> [link TBD], or committed with existing reviews and meta-reviews from <strong>ACL Rolling Review (ARR)</strong> through the OpenReview commitment page [link TBD]. All submissions are reviewed <strong>double-blind</strong>, and each paper receives <strong>at least three reviews</strong>.</p>
+<p style="margin: 0 0 18px; font-size: 17px; line-height: 1.7; max-width: 52em">We invite <strong>long and short papers</strong>, with the <strong>same page limits as the COLING 2027 main conference</strong>, formatted in the COLING 2027 style [template link TBD]. Papers can be submitted directly through <strong>OpenReview</strong> [link TBD], or committed with existing reviews and meta-reviews from <strong>ACL Rolling Review (ARR)</strong> through the OpenReview commitment page [link TBD]. All submissions are reviewed <strong>double-blind</strong>, and each paper receives <strong>at least two reviews</strong>.</p>
 <p style="margin: 0; font-size: 17px; line-height: 1.7; max-width: 52em">We <strong>cannot accept submissions for publication that will be (or have been) published elsewhere</strong>. All accepted submissions will be presented as <strong>talks and/or posters</strong> at the workshop, and will be <strong>included in the workshop proceedings</strong>.</p>
 </section>
 <section id="dates" style="padding-top: clamp(40px, 5vw, 60px)">
 <h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Important Dates</h2>
+<div style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 12px; padding: clamp(18px, 2.6vw, 28px); margin-top: 20px">
+<div role="group" aria-label="Dates by track" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 18px">
+<button onClick="{{showMain}}" aria-pressed="{{mainOn}}" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid #0156AA; background: {{mainBg}}; color: {{mainFg}}; font-size: 15px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease, color 200ms ease">Main Track</button>
+<button onClick="{{showShared}}" aria-pressed="{{sharedOn}}" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid #0156AA; background: {{sharedBg}}; color: {{sharedFg}}; font-size: 15px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease, color 200ms ease">Shared Task Track</button>
+</div>
+<sc-if value="{{mainTab}}" hint-placeholder-val="{{true}}">
 <div style="overflow-x: auto">
 <table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
 <tbody>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">First call for papers</th><td style="padding: 14px 12px; white-space: nowrap">Saturday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">November 21, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Second call for papers</th><td style="padding: 14px 12px; white-space: nowrap">Monday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">December 21, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">First call for papers</th><td style="padding: 14px 12px; white-space: nowrap">Sunday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">October 25, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Second call for papers</th><td style="padding: 14px 12px; white-space: nowrap">Wednesday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">November 25, 2026</td></tr>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Direct paper submission deadline</th><td style="padding: 14px 12px; white-space: nowrap">Tuesday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">January 5, 2027</td></tr>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Pre-reviewed ARR commitment deadline</th><td style="padding: 14px 12px; white-space: nowrap">—</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">TBA</td></tr>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Notification of acceptance</th><td style="padding: 14px 12px; white-space: nowrap">Saturday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">February 6, 2027</td></tr>
+</tbody>
+</table>
+</div>
+</sc-if>
+<sc-if value="{{sharedTab}}" hint-placeholder-val="{{false}}">
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
+<tbody>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Shared task call for participation</th><td style="padding: 14px 12px; white-space: nowrap">Tuesday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">November 10, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Registration opens</th><td style="padding: 14px 12px; white-space: nowrap">Tuesday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">November 10, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Training and development data release</th><td style="padding: 14px 12px; white-space: nowrap">Wednesday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">November 25, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Test data release</th><td style="padding: 14px 12px; white-space: nowrap">Sunday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">December 20, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">System output submission deadline</th><td style="padding: 14px 12px; white-space: nowrap">Friday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">December 25, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Evaluation results release</th><td style="padding: 14px 12px; white-space: nowrap">Wednesday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">December 30, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">System description paper deadline</th><td style="padding: 14px 12px; white-space: nowrap">Sunday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">January 10, 2027</td></tr>
+</tbody>
+</table>
+</div>
+</sc-if>
+</div>
+<h3 style="margin: 28px 0 12px; font-size: 19px; font-weight: 700">Common Dates</h3>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
+<tbody>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Camera-ready deadline</th><td style="padding: 14px 12px; white-space: nowrap">Friday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">March 5, 2027</td></tr>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Proceedings due (hard deadline)</th><td style="padding: 14px 12px; white-space: nowrap">Monday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">April 5, 2027</td></tr>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Pre-recorded video due (hard deadline)</th><td style="padding: 14px 12px; white-space: nowrap">Thursday</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 400">April 15, 2027</td></tr>
@@ -177,7 +207,7 @@ button{font-family:inherit}
 class Component extends DCLogic {
   constructor(props) {
     super(props);
-    this.state = { menu: null, picks: [] };
+    this.state = { menu: null, picks: [], tab: 'main' };
   }
   renderVals() {
     const s = this.state;
@@ -190,6 +220,18 @@ class Component extends DCLogic {
       toggleCalls: t('calls'),
       toggleCommittee: t('committee'),
       closeMenu: () => this.setState({ menu: null })
+    };
+    const tabVals = {
+      mainTab: s.tab === 'main',
+      sharedTab: s.tab === 'shared',
+      showMain: () => this.setState({ tab: 'main' }),
+      showShared: () => this.setState({ tab: 'shared' }),
+      mainOn: s.tab === 'main' ? 'true' : 'false',
+      sharedOn: s.tab === 'shared' ? 'true' : 'false',
+      mainBg: s.tab === 'main' ? '#0156AA' : '#FFFFFF',
+      mainFg: s.tab === 'main' ? '#FFFFFF' : '#0156AA',
+      sharedBg: s.tab === 'shared' ? '#0156AA' : '#FFFFFF',
+      sharedFg: s.tab === 'shared' ? '#FFFFFF' : '#0156AA'
     };
     const CHIPS = [
       { id: 'explain', label: 'explains why a text was flagged', dir: 'explain' },
@@ -252,7 +294,7 @@ class Component extends DCLogic {
     else if (nums.length === 2) trackLine = 'Tracks ' + nums[0] + ' and ' + nums[1];
     else if (nums.length === 3) trackLine = 'Tracks 1, 2 and 3';
 
-    return Object.assign({}, menuVals, {
+    return Object.assign({}, menuVals, tabVals, {
       chips: chips,
       layers: layers,
       headline: headline,

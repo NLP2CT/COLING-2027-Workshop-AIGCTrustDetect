@@ -79,7 +79,7 @@ button{font-family:inherit}
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <p style="margin: 0; font-size: 18px; line-height: 1.65">The 1st Workshop on AI-Generated Content Detection and Trustworthy Governance (AIGCTrustDetect) will take place in <strong>Macau, China</strong> as part of <strong>COLING 2027</strong> (May 9–14, 2027).</p>
 <p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 21px; line-height: 1.5; color: #0156AA">Going beyond binary AIGC detection toward full-stack, explainable, and evasion-resistant governance that generalizes across languages and deploys cost-effectively in the real world.</p>
-<p style="margin: 0; font-size: 17px; line-height: 1.7">Existing workshops in this area have focused mainly on binary AIGC detection, a narrow paradigm that falls short of the complex governance needs of real-world applications. AIGCTrustDetect broadens the scope from standalone detection to a full-stack framework for trustworthy governance, with an emphasis on generalizability and deployment value.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7">A binary label cannot say which parts a model touched, whether the events described are real, or how a detector fares in a language it was not built for. AIGCTrustDetect treats detection as one component of trustworthy governance rather than the whole of it: where machine authorship must be ruled out, detection has to be reliable; where AI assistance is welcome, the content itself has to be reliable.</p>
 <p style="margin: 0; font-size: 17px; line-height: 1.7">The program combines invited keynotes, peer-reviewed research papers and a three-track shared task, bringing academic research and industrial practice into one forum.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
 <a href="call-for-papers.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 6px; background: #0156AA; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Call for Papers</a>
@@ -137,9 +137,9 @@ button{font-family:inherit}
 <div style="overflow-x: auto">
 <table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
 <tbody>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 16px 32px 16px 12px; text-align: left; font-weight: 700; white-space: nowrap; vertical-align: top">[Date TBD]</th><td style="padding: 16px 12px">Website is up!</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 16px 32px 16px 12px; text-align: left; font-weight: 700; white-space: nowrap; vertical-align: top">[Date TBD]</th><td style="padding: 16px 12px"><a href="call-for-papers.html" style="font-weight: 600">First Call for Papers</a> is posted.</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 16px 32px 16px 12px; text-align: left; font-weight: 700; white-space: nowrap; vertical-align: top">[Date TBD]</th><td style="padding: 16px 12px"><a href="shared-tasks.html" style="font-weight: 600">Shared task registration</a> is open.</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 16px 32px 16px 12px; text-align: left; font-weight: 700; white-space: nowrap; vertical-align: top">October 17, 2026</th><td style="padding: 16px 12px">Website is up!</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 16px 32px 16px 12px; text-align: left; font-weight: 700; white-space: nowrap; vertical-align: top">October 25, 2026</th><td style="padding: 16px 12px"><a href="call-for-papers.html" style="font-weight: 600">First Call for Papers</a> is posted.</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 16px 32px 16px 12px; text-align: left; font-weight: 700; white-space: nowrap; vertical-align: top">November 10, 2026</th><td style="padding: 16px 12px"><a href="shared-tasks.html" style="font-weight: 600">Shared task call for participation</a> is posted.</td></tr>
 </tbody>
 </table>
 </div>
@@ -147,15 +147,44 @@ button{font-family:inherit}
 
 <section id="dates" style="padding-top: clamp(48px, 6vw, 72px)">
 <h2 style="margin: 0 0 8px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">Important Dates</h2>
+<div style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 12px; padding: clamp(18px, 2.6vw, 28px); margin-top: 20px">
+<div role="group" aria-label="Dates by track" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 18px">
+<button onClick="{{showMain}}" aria-pressed="{{mainOn}}" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid #0156AA; background: {{mainBg}}; color: {{mainFg}}; font-size: 15px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease, color 200ms ease">Main Track</button>
+<button onClick="{{showShared}}" aria-pressed="{{sharedOn}}" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid #0156AA; background: {{sharedBg}}; color: {{sharedFg}}; font-size: 15px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease, color 200ms ease">Shared Task Track</button>
+</div>
+<sc-if value="{{mainTab}}" hint-placeholder-val="{{true}}">
 <div style="overflow-x: auto">
 <table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
 <tbody>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">First call for papers</th><td style="padding: 14px 12px; white-space: nowrap">Saturday</td><td style="padding: 14px 12px; white-space: nowrap">November 21, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Second call for papers</th><td style="padding: 14px 12px; white-space: nowrap">Monday</td><td style="padding: 14px 12px; white-space: nowrap">December 21, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Shared task data release</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">First call for papers</th><td style="padding: 14px 12px; white-space: nowrap">Sunday</td><td style="padding: 14px 12px; white-space: nowrap">October 25, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Second call for papers</th><td style="padding: 14px 12px; white-space: nowrap">Wednesday</td><td style="padding: 14px 12px; white-space: nowrap">November 25, 2026</td></tr>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Direct paper submission deadline</th><td style="padding: 14px 12px; white-space: nowrap">Tuesday</td><td style="padding: 14px 12px; white-space: nowrap">January 5, 2027</td></tr>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Pre-reviewed ARR commitment deadline</th><td style="padding: 14px 12px; white-space: nowrap">—</td><td style="padding: 14px 12px; white-space: nowrap">TBA</td></tr>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Notification of acceptance</th><td style="padding: 14px 12px; white-space: nowrap">Saturday</td><td style="padding: 14px 12px; white-space: nowrap">February 6, 2027</td></tr>
+</tbody>
+</table>
+</div>
+</sc-if>
+<sc-if value="{{sharedTab}}" hint-placeholder-val="{{false}}">
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
+<tbody>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Shared task call for participation</th><td style="padding: 14px 12px; white-space: nowrap">Tuesday</td><td style="padding: 14px 12px; white-space: nowrap">November 10, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Registration opens</th><td style="padding: 14px 12px; white-space: nowrap">Tuesday</td><td style="padding: 14px 12px; white-space: nowrap">November 10, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Training and development data release</th><td style="padding: 14px 12px; white-space: nowrap">Wednesday</td><td style="padding: 14px 12px; white-space: nowrap">November 25, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Test data release</th><td style="padding: 14px 12px; white-space: nowrap">Sunday</td><td style="padding: 14px 12px; white-space: nowrap">December 20, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">System output submission deadline</th><td style="padding: 14px 12px; white-space: nowrap">Friday</td><td style="padding: 14px 12px; white-space: nowrap">December 25, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Evaluation results release</th><td style="padding: 14px 12px; white-space: nowrap">Wednesday</td><td style="padding: 14px 12px; white-space: nowrap">December 30, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">System description paper deadline</th><td style="padding: 14px 12px; white-space: nowrap">Sunday</td><td style="padding: 14px 12px; white-space: nowrap">January 10, 2027</td></tr>
+</tbody>
+</table>
+</div>
+</sc-if>
+</div>
+<h3 style="margin: 28px 0 12px; font-size: 19px; font-weight: 700">Common Dates</h3>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
+<tbody>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Camera-ready deadline</th><td style="padding: 14px 12px; white-space: nowrap">Friday</td><td style="padding: 14px 12px; white-space: nowrap">March 5, 2027</td></tr>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Proceedings due (hard deadline)</th><td style="padding: 14px 12px; white-space: nowrap">Monday</td><td style="padding: 14px 12px; white-space: nowrap">April 5, 2027</td></tr>
 <tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Pre-recorded video due (hard deadline)</th><td style="padding: 14px 12px; white-space: nowrap">Thursday</td><td style="padding: 14px 12px; white-space: nowrap">April 15, 2027</td></tr>
@@ -173,7 +202,7 @@ button{font-family:inherit}
 <h2 style="margin: 0 0 24px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">Research Directions</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 28px 56px; align-items: flex-start">
 <div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<p style="margin: 0; font-size: 17px; line-height: 1.7">The workshop is organized around five directions grounded in practical needs. We picture them as a stack: reliable detection is the foundation, and each layer above it addresses a question that deployment raises and a binary label cannot answer.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7">The workshop is organized around five directions grounded in practical needs. We picture them as a stack: reliable detection sits at the base, and each layer above it addresses a question that deployment raises and a binary label cannot answer.</p>
 <p style="margin: 0; font-size: 14px; color: #5A616B">Select a layer to read its description.</p>
 </div>
 <div style="flex: 0 1 500px; min-width: 0; margin-left: auto; display: flex; flex-direction: column; gap: 5px">
@@ -326,7 +355,7 @@ button{font-family:inherit}
 class Component extends DCLogic {
   constructor(props) {
     super(props);
-    this.state = { mode: 'binary', version: 'refined', layer: 4, step: 1, a1: null, a2: null, a3: null, menu: null };
+    this.state = { mode: 'binary', version: 'refined', layer: 4, step: 1, a1: null, a2: null, a3: null, menu: null, tab: 'main' };
   }
 
   versions() {
@@ -409,7 +438,7 @@ class Component extends DCLogic {
       { name: 'Hallucination, quality and factuality', role: 'content', desc: 'Authorship is only part of the question. Whether generated content is accurate, supported and proportionate is a largely underexplored problem, covering quality assessment and factuality verification.' },
       { name: 'Cross-lingual generalization', role: 'coverage', desc: 'Detection research remains largely English-centric. We seek methods that extend to low-resource languages at low cost, without building each language from scratch.' },
       { name: 'Detection in complex generation scenarios', role: 'robustness', desc: 'Real-world content is paraphrased, mixed with human writing and sometimes deliberately disguised. Detectors must adapt to how content is actually produced and remain robust to evasion.' },
-      { name: 'Reliable and explainable detection', role: 'foundation', desc: 'A bare score is difficult to act on and difficult to contest. Detection results should expose their evidence so that those who rely on them can understand and verify them.' }
+      { name: 'Reliable and explainable detection', role: 'base', desc: 'A bare score is difficult to act on and difficult to contest. Detection results should expose their evidence so that those who rely on them can understand and verify them.' }
     ];
     const layers = layerData.map((l, i) => {
       const open = s.layer === i;
@@ -434,6 +463,17 @@ class Component extends DCLogic {
       toggleCalls: toggleMenu('calls'),
       toggleCommittee: toggleMenu('committee'),
       closeMenu: () => this.setState({ menu: null }),
+
+      mainTab: s.tab === 'main',
+      sharedTab: s.tab === 'shared',
+      showMain: () => this.setState({ tab: 'main' }),
+      showShared: () => this.setState({ tab: 'shared' }),
+      mainOn: s.tab === 'main' ? 'true' : 'false',
+      sharedOn: s.tab === 'shared' ? 'true' : 'false',
+      mainBg: s.tab === 'main' ? '#0156AA' : '#FFFFFF',
+      mainFg: s.tab === 'main' ? '#FFFFFF' : '#0156AA',
+      sharedBg: s.tab === 'shared' ? '#0156AA' : '#FFFFFF',
+      sharedFg: s.tab === 'shared' ? '#FFFFFF' : '#0156AA',
 
       isBinary: !spectrum,
       isSpectrum: spectrum,
