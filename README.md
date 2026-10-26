@@ -14,7 +14,7 @@ Main track:
 
 | Event | Date |
 |---|---|
-| First call for papers | Sunday, October 25, 2026 |
+| First call for papers | Friday, October 30, 2026 |
 | Second call for papers | Wednesday, November 25, 2026 |
 | Direct paper submission deadline | Tuesday, January 5, 2027 |
 | Notification of acceptance | Saturday, February 6, 2027 |
