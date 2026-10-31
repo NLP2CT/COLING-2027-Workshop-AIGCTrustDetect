@@ -99,7 +99,7 @@ button{font-family:inherit}
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
 <p style="margin: 0; font-size: 15px; font-weight: 700">My work…</p>
 <div role="group" aria-label="What your work does" style="display: flex; flex-wrap: wrap; gap: 8px">
-<sc-for list="{{chips}}" as="c" hint-placeholder-count="8">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="10">
 <button onClick="{{c.toggle}}" aria-pressed="{{c.pressed}}" style="min-height: 44px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid {{c.border}}; background: {{c.bg}}; color: {{c.fg}}; font-size: 14px; line-height: 1.3; text-align: left; cursor: pointer; transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease">{{c.label}}</button>
 </sc-for>
 </div>
@@ -113,7 +113,7 @@ button{font-family:inherit}
 <p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #3B414B">{{detail}}</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 5px">
-<sc-for list="{{layers}}" as="l" hint-placeholder-count="5">
+<sc-for list="{{layers}}" as="l" hint-placeholder-count="6">
 <div style="min-height: 40px; padding: 8px 14px; box-sizing: border-box; border-radius: 8px; border: 1px solid {{l.border}}; background: {{l.bg}}; color: {{l.fg}}; display: flex; align-items: center; gap: 10px; font-size: 13.5px; font-weight: 600; line-height: 1.25; transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease">
 <span style="flex: 1">{{l.name}}</span>
 <sc-if value="{{l.on}}" hint-placeholder-val="{{false}}"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7.5 L5.5 11 L12 3.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></sc-if>
@@ -245,18 +245,21 @@ class Component extends DCLogic {
       { id: 'lang', label: 'works beyond English or in low-resource languages', dir: 'cross' },
       { id: 'policy', label: 'decides how to respond once content is flagged', dir: 'gov' },
       { id: 'deploy', label: 'adapts to different deployment settings', dir: 'gov' },
+      { id: 'agent', label: 'traces content through an agent or tool pipeline', dir: 'agentic' },
+      { id: 'oversight', label: 'audits or attributes AI-generated code and reports', dir: 'agentic' },
       { id: 'fact', label: 'checks whether generated content is accurate', dir: 'fact' },
       { id: 'halluc', label: 'studies hallucination or text reliability', dir: 'fact' }
     ];
     const DIRS = [
       { id: 'gov', name: 'Hierarchical and differentiated governance' },
+      { id: 'agentic', name: 'Governance in agentic workflows' },
       { id: 'fact', name: 'Hallucination, reliability and factuality' },
       { id: 'cross', name: 'Cross-lingual generalization' },
       { id: 'complex', name: 'Detection in complex generation scenarios' },
       { id: 'explain', name: 'Reliable and explainable detection' }
     ];
     const TRACKS = { cross: [1, 2], complex: [1], fact: [3] };
-    const TINTS = ['#F2F7FC', '#E6F0FA', '#D9E9F7', '#CCE1F4', '#BFD9F1'];
+    const TINTS = ['#F4F8FC', '#EAF2FA', '#DDEBF8', '#CFE2F5', '#C2D9F0', '#B5D1EC'];
     const picked = new Set(s.picks);
     const hit = new Set();
     CHIPS.forEach((c) => { if (picked.has(c.id)) hit.add(c.dir); });
@@ -290,7 +293,7 @@ class Component extends DCLogic {
     let headline = 'Pick what your work does.';
     let detail = 'The stack lights up the research directions your paper speaks to.';
     if (picked.size > 0) {
-      headline = 'Your paper fits ' + n + ' of 5 directions.';
+      headline = 'Your paper fits ' + n + ' of 6 directions.';
       detail = n >= 3 ? 'A full-stack paper: exactly what this workshop is for.' : 'One direction is enough to submit; papers that connect several are especially welcome.';
     }
     const nums = Array.from(new Set([].concat(...Array.from(hit).map((h) => TRACKS[h] || [])))).sort();
