@@ -30,35 +30,27 @@ button{font-family:inherit}
 <div style="display: flex; align-items: center; gap: 16px; margin-right: auto">
 <a href="https://2027.coling-iccl.org/" aria-label="COLING 2027 main conference website" style="display: inline-flex; align-items: center; min-height: 48px"><img src="assets/images/coling2027-logo.png" alt="COLING 2027, May 9–14, 2027, Macao, China" style="display: block; height: 60px; width: auto"></a>
 <span aria-hidden="true" style="width: 1px; height: 44px; background: #CECFD1"></span>
-<a href="index.html" style="display: inline-flex; flex-direction: column; justify-content: center; min-height: 48px; color: #2A313C; text-decoration: none">
+<a href="./" style="display: inline-flex; flex-direction: column; justify-content: center; min-height: 48px; color: #2A313C; text-decoration: none">
 <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 19px"><svg width="30" height="18" viewBox="0 0 34 20" fill="none" aria-hidden="true"><rect x="1" y="1" width="32" height="18" rx="9" stroke="#2A313C" stroke-width="2"></rect><circle cx="10" cy="10" r="4" fill="#E39B1B"></circle><circle cx="24" cy="10" r="4" fill="#0156AA"></circle><line x1="17" y1="4" x2="17" y2="16" stroke="#2A313C" stroke-width="2" stroke-dasharray="2 2"></line></svg>AIGCTrustDetect</span>
 <span style="font-size: 13px; color: #5A616B">Workshop at COLING 2027</span>
 </a>
 </div>
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; font-size: 16px">
-<a href="index.html" aria-current="page" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid #0156AA; font-weight: 700">Home</a>
+<a href="./" aria-current="page" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid #0156AA; font-weight: 700">Home</a>
 <div style="position: relative">
 <button onClick="{{toggleCalls}}" aria-expanded="{{callsExpanded}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #2A313C; font-size: 16px; font-weight: 400; cursor: pointer">Calls<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0 L10 0 L5 6 Z" fill="#2A313C"></path></svg></button>
 <sc-if value="{{callsOpen}}" hint-placeholder-val="{{false}}">
 <div class="rise" style="position: absolute; top: 100%; left: -12px; z-index: 30; min-width: 210px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 6px; box-shadow: 0 12px 28px -12px rgba(42, 49, 60, 0.35); padding: 6px 0; display: flex; flex-direction: column">
-<a href="call-for-papers.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Call for Papers</a>
-<a href="shared-tasks.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Shared Tasks</a>
+<a href="call-for-papers" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Call for Papers</a>
+<a href="shared-tasks" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Shared Tasks</a>
 </div>
 </sc-if>
 </div>
-<div style="position: relative">
-<button onClick="{{toggleCommittee}}" aria-expanded="{{committeeExpanded}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #2A313C; font-size: 16px; font-weight: 400; cursor: pointer">Committee<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0 L10 0 L5 6 Z" fill="#2A313C"></path></svg></button>
-<sc-if value="{{committeeOpen}}" hint-placeholder-val="{{false}}">
-<div class="rise" style="position: absolute; top: 100%; left: -12px; z-index: 30; min-width: 210px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 6px; box-shadow: 0 12px 28px -12px rgba(42, 49, 60, 0.35); padding: 6px 0; display: flex; flex-direction: column">
-<a href="organizers.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Organizers</a>
-<a href="program-committee.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Program Committee</a>
-</div>
-</sc-if>
-</div>
-<a href="speakers.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Speakers</a>
-<a href="program.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Program</a>
-<a href="participants-info.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Participants Info</a>
-<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Contact</a>
+<a href="organizers" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Committee</a>
+<a href="speakers" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Speakers</a>
+<a href="program" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Program</a>
+<a href="participants-info" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Participants Info</a>
+<a href="sponsorship" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Sponsorship</a>
 </nav>
 </div>
 </header>
@@ -78,12 +70,12 @@ button{font-family:inherit}
 <div style="display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: stretch">
 <div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
 <p style="margin: 0; font-size: 18px; line-height: 1.65">The 1st Workshop on AI-Generated Content Detection and Trustworthy Governance (AIGCTrustDetect) will take place in <strong>Macau, China</strong> as part of <strong>COLING 2027</strong> (May 9–14, 2027).</p>
-<p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 21px; line-height: 1.5; color: #0156AA">Going beyond binary AIGC detection toward full-stack, explainable, and evasion-resistant governance that generalizes across languages and deploys cost-effectively in the real world.</p>
-<p style="margin: 0; font-size: 17px; line-height: 1.7">A binary label cannot say which parts a model touched, whether the events described are real, or how a detector fares in a language it was not built for. AIGCTrustDetect treats detection as one component of trustworthy governance rather than the whole of it: where machine authorship must be ruled out, detection has to be reliable; where AI assistance is welcome, the content itself has to be reliable.</p>
-<p style="margin: 0; font-size: 17px; line-height: 1.7">The program combines invited keynotes, peer-reviewed research papers and a three-track shared task, bringing academic research and industrial practice into one forum.</p>
+<p style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 21px; line-height: 1.5; color: #0156AA">The workshop aims to move beyond binary AIGC detection toward full-stack, explainable and evasion-resistant governance, with research that generalizes across languages and supports cost-effective deployment in real-world settings.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7">A binary label alone cannot show which parts of a text a model generated or revised, whether the content is supported by evidence, or whether a detector's conclusions generalize across languages. AIGCTrustDetect therefore treats detection as one component of trustworthy governance rather than the whole of it. Reliable detection is essential where machine authorship must be ruled out; where AI assistance is permitted, the focus shifts to the reliability of the resulting content.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7">The workshop connects academic research and industrial practice through invited keynotes, peer-reviewed research papers and a three-track shared task.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
-<a href="call-for-papers.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 6px; background: #0156AA; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Call for Papers</a>
-<a href="shared-tasks.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 6px; border: 1.5px solid #0156AA; color: #0156AA; text-decoration: none; font-weight: 600; font-size: 16px">Shared Tasks</a>
+<a href="call-for-papers" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 6px; background: #0156AA; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px">Call for Papers</a>
+<a href="shared-tasks" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 6px; border: 1.5px solid #0156AA; color: #0156AA; text-decoration: none; font-weight: 600; font-size: 16px">Shared Tasks</a>
 </div>
 </div>
 
@@ -126,6 +118,14 @@ button{font-family:inherit}
 </div>
 </div>
 </sc-if>
+<div style="padding-top: 12px; border-top: 1px solid #CECFD1">
+<p style="margin: 0 0 8px; font-size: 13px; font-weight: 700">What fine-grained detection adds</p>
+<div style="display: grid; grid-template-columns: 78px 1fr; gap: 7px 10px; font-size: 12.5px; line-height: 1.45">
+<strong>Granularity</strong><span>Not only a verdict for the whole passage, but labels for individual sentences and spans.</span>
+<strong>Authorship</strong><span>Distinguishes LLM-refined writing from fully LLM-generated text, preserving mixed human contributions.</span>
+<strong>Evidence</strong><span>Pairs the label with highlighted text and reasons that readers can inspect and contest.</span>
+</div>
+</div>
 <figcaption style="font-size: 11.5px; line-height: 1.4; color: #5A616B">Illustrative example with hand-set scores, not real detector output.</figcaption>
 </div>
 </figure>
@@ -144,8 +144,8 @@ button{font-family:inherit}
 </section>
 
 <section id="dates" style="padding-top: clamp(48px, 6vw, 72px)">
-<h2 style="margin: 0 0 8px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">Important Dates</h2>
-<div style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 12px; padding: clamp(18px, 2.6vw, 28px); margin-top: 20px">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">Important Dates</h2>
+<div style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 12px; padding: clamp(18px, 2.6vw, 28px)">
 <div role="group" aria-label="Dates by track" style="display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 18px">
 <button onClick="{{showMain}}" aria-pressed="{{mainOn}}" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid #0156AA; background: {{mainBg}}; color: {{mainFg}}; font-size: 15px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease, color 200ms ease">Main Track</button>
 <button onClick="{{showShared}}" aria-pressed="{{sharedOn}}" style="min-height: 44px; padding: 0 20px; border-radius: 999px; border: 1.5px solid #0156AA; background: {{sharedBg}}; color: {{sharedFg}}; font-size: 15px; font-weight: 600; cursor: pointer; transition: background-color 200ms ease, color 200ms ease">Shared Task Track</button>
@@ -154,11 +154,10 @@ button{font-family:inherit}
 <div style="overflow-x: auto">
 <table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
 <tbody>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">First call for papers</th><td style="padding: 14px 12px; white-space: nowrap">Friday</td><td style="padding: 14px 12px; white-space: nowrap">October 30, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Second call for papers</th><td style="padding: 14px 12px; white-space: nowrap">Wednesday</td><td style="padding: 14px 12px; white-space: nowrap">November 25, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Direct paper submission deadline</th><td style="padding: 14px 12px; white-space: nowrap">Tuesday</td><td style="padding: 14px 12px; white-space: nowrap">January 5, 2027</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Pre-reviewed ARR commitment deadline</th><td style="padding: 14px 12px; white-space: nowrap">—</td><td style="padding: 14px 12px; white-space: nowrap">TBA</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Notification of acceptance</th><td style="padding: 14px 12px; white-space: nowrap">Saturday</td><td style="padding: 14px 12px; white-space: nowrap">February 6, 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">First call for papers</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">November 5, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Second call for papers</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">December 5, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Direct paper submission deadline</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">January 10, 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Notification of acceptance</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">February 10, 2027</td></tr>
 </tbody>
 </table>
 </div>
@@ -167,40 +166,40 @@ button{font-family:inherit}
 <div style="overflow-x: auto">
 <table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
 <tbody>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Shared task call for participation</th><td style="padding: 14px 12px; white-space: nowrap">Tuesday</td><td style="padding: 14px 12px; white-space: nowrap">November 10, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Registration opens</th><td style="padding: 14px 12px; white-space: nowrap">Tuesday</td><td style="padding: 14px 12px; white-space: nowrap">November 10, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Training and development data release</th><td style="padding: 14px 12px; white-space: nowrap">Wednesday</td><td style="padding: 14px 12px; white-space: nowrap">November 25, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Test data release</th><td style="padding: 14px 12px; white-space: nowrap">Sunday</td><td style="padding: 14px 12px; white-space: nowrap">December 20, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">System output submission deadline</th><td style="padding: 14px 12px; white-space: nowrap">Friday</td><td style="padding: 14px 12px; white-space: nowrap">December 25, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Evaluation results release</th><td style="padding: 14px 12px; white-space: nowrap">Wednesday</td><td style="padding: 14px 12px; white-space: nowrap">December 30, 2026</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">System description paper deadline</th><td style="padding: 14px 12px; white-space: nowrap">Sunday</td><td style="padding: 14px 12px; white-space: nowrap">January 10, 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Call for participation and registration opens</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">November 5, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Task guidelines and training data release</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">November 25, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Test data release</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">December 20, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Results submission deadline</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">December 25, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Leaderboard release and call for system papers</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">December 30, 2026</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">System paper submission</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">January 10, 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Notification of acceptance</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">February 10, 2027</td></tr>
 </tbody>
 </table>
 </div>
 </sc-if>
-</div>
-<h3 style="margin: 28px 0 12px; font-size: 19px; font-weight: 700">Common Dates</h3>
+<div style="margin-top: 22px; padding-top: 20px; border-top: 1px solid #CECFD1">
+<h3 style="margin: 0 0 12px; font-size: 19px; font-weight: 700">Common Dates</h3>
 <div style="overflow-x: auto">
 <table style="width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.5">
 <tbody>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Camera-ready deadline</th><td style="padding: 14px 12px; white-space: nowrap">Friday</td><td style="padding: 14px 12px; white-space: nowrap">March 5, 2027</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Proceedings due (hard deadline)</th><td style="padding: 14px 12px; white-space: nowrap">Monday</td><td style="padding: 14px 12px; white-space: nowrap">April 5, 2027</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">Pre-recorded video due (hard deadline)</th><td style="padding: 14px 12px; white-space: nowrap">Thursday</td><td style="padding: 14px 12px; white-space: nowrap">April 15, 2027</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 700">Workshop day</th><td style="padding: 14px 12px; white-space: nowrap">[TBD]</td><td style="padding: 14px 12px; white-space: nowrap; font-weight: 700">[TBD], May 2027</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1; color: #5A616B"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">COLING 2027 virtual conference</th><td style="padding: 14px 12px; white-space: nowrap">Thursday – Friday</td><td style="padding: 14px 12px; white-space: nowrap">May 6–7, 2027</td></tr>
-<tr style="border-bottom: 1px solid #CECFD1; color: #5A616B"><th scope="row" style="padding: 14px 12px; text-align: left; font-weight: 400">COLING 2027 main conference</th><td style="padding: 14px 12px; white-space: nowrap">Sunday – Friday</td><td style="padding: 14px 12px; white-space: nowrap">May 9–14, 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Camera-ready deadline</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">March 5, 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Proceedings due (hard deadline)</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">April 5, 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 400">Pre-recorded video due (hard deadline)</th><td style="padding: 12px 0; text-align: right; white-space: nowrap">April 15, 2027</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 12px 16px 12px 0; text-align: left; font-weight: 700">Workshop day</th><td style="padding: 12px 0; text-align: right; white-space: nowrap; font-weight: 700">[TBD], May 2027</td></tr>
 </tbody>
 </table>
 </div>
-<p style="margin: 18px 0 0; font-size: 16px; font-weight: 700">All deadlines are 11:59 pm UTC-12h (anywhere on earth).</p>
-<p style="margin: 8px 0 0; font-size: 16px">Submission details are in the <a href="call-for-papers.html" style="font-weight: 600">Call for Papers</a>; shared task timelines are on the <a href="shared-tasks.html" style="font-weight: 600">Shared Tasks</a> page.</p>
+</div>
+<p style="margin: 18px 0 0; font-size: 14.5px; font-weight: 600; color: #5A616B">All deadlines are 11:59 pm UTC-12h (anywhere on earth).</p>
+<p style="margin: 6px 0 0; font-size: 14.5px; color: #5A616B">Submission details are in the <a href="call-for-papers" style="font-weight: 600">Call for Papers</a>; shared task timelines are on the <a href="shared-tasks" style="font-weight: 600">Shared Tasks</a> page.</p>
+</div>
 </section>
 
 <section id="topics" style="padding-top: clamp(48px, 6vw, 72px)">
 <h2 style="margin: 0 0 24px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">Topics of Interest</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 28px 56px; align-items: flex-start">
 <div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
-<p style="margin: 0; font-size: 17px; line-height: 1.7">We invite submissions across six directions grounded in practical needs. We picture them as a stack: reliable detection sits at the base, and each layer above it addresses a question that deployment raises and a binary label cannot answer. The full list of topics is in the <a href="call-for-papers.html" style="font-weight: 600">Call for Papers</a>.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7">We invite submissions across six directions grounded in practical needs. We picture them as a stack: reliable detection sits at the base, and each layer above it addresses a question that deployment raises and a binary label cannot answer. The full list of topics is in the <a href="call-for-papers" style="font-weight: 600">Call for Papers</a>.</p>
 <p style="margin: 0; font-size: 14px; color: #5A616B">Select a layer to read its description.</p>
 </div>
 <div style="flex: 0 1 500px; min-width: 0; margin-left: auto; display: flex; flex-direction: column; gap: 5px">
@@ -221,8 +220,8 @@ button{font-family:inherit}
 
 <section id="demo" style="padding-top: clamp(40px, 5vw, 60px)">
 <h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(26px, 2.6vw, 32px); font-weight: 700">Interactive Examples</h2>
-<p style="margin: 0 0 20px; font-size: 17px; line-height: 1.7; max-width: 52em">Each shared task track targets a question that a binary detector cannot answer. Try one example from each before reading the <a href="shared-tasks.html" style="font-weight: 600">task descriptions</a>.</p>
-<div id="game" style="max-width: 880px; background: #0156AA; color: #FFFFFF; border-radius: 12px; padding: clamp(20px, 2.8vw, 30px); display: flex; flex-direction: column; gap: 16px; box-shadow: 0 24px 48px -32px rgba(1, 40, 90, 0.55)">
+<p style="margin: 0 0 20px; font-size: 17px; line-height: 1.7">Each shared task track targets a question that a binary detector cannot answer. Try one example from each before reading the <a href="shared-tasks" style="font-weight: 600">task descriptions</a>.</p>
+<div id="game" style="background: #0156AA; color: #FFFFFF; border-radius: 12px; padding: clamp(20px, 2.8vw, 30px); display: flex; flex-direction: column; gap: 16px; box-shadow: 0 24px 48px -32px rgba(1, 40, 90, 0.55)">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px; padding-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.2)">
 <div style="display: flex; flex-direction: column; gap: 3px">
 <h3 style="margin: 0; font-size: 19px; font-weight: 700">Who wrote this?</h3>
@@ -290,7 +289,15 @@ button{font-family:inherit}
 </sc-if>
 <sc-if value="{{step3}}" hint-placeholder-val="{{false}}">
 <div class="rise" style="display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #E6F0FA"><strong style="color: #FFFFFF">Track 3.</strong> One sentence claims more than its evidence supports. Which one?</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.5; color: #E6F0FA"><strong style="color: #FFFFFF">Track 3.</strong> Read the study summary, then choose the sentence that claims more than its evidence supports.</p>
+<div style="padding: 14px 18px; border-radius: 8px; background: #FFFFFF; color: #2A313C">
+<p style="margin: 0 0 8px; font-size: 12.5px; font-weight: 700; color: #5A616B">Evidence from the study</p>
+<div style="display: grid; grid-template-columns: 130px 1fr; gap: 7px 16px; font-size: 14.5px; line-height: 1.5">
+<strong>Test data</strong><span>2,000 English news articles</span>
+<strong>Result</strong><span>94% accuracy on this test set</span>
+<strong>Scope</strong><span>No other languages or domains are evaluated.</span>
+</div>
+</div>
 <div style="display: flex; flex-direction: column; gap: 6px">
 <sc-for list="{{opts3}}" as="o" hint-placeholder-count="4">
 <button onClick="{{o.pick}}" disabled="{{o.disabled}}" style="min-height: 44px; padding: 10px 14px; border-radius: 8px; border: 2px solid {{o.border}}; background: {{o.bg}}; color: #2A313C; font-family: 'Newsreader', Georgia, serif; font-size: 16px; line-height: 1.45; font-weight: 400; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px">
@@ -312,7 +319,7 @@ button{font-family:inherit}
 <p style="margin: 0; font-size: 32px; font-weight: 700; line-height: 1">{{scoreLine}}</p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #E6F0FA; max-width: 40em">Each answer came with a reason. Most detectors still return only a label. The shared tasks invite systems that can do more.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 10px">
-<a href="shared-tasks.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 6px; background: #E39B1B; color: #2A313C; text-decoration: none; font-weight: 700; font-size: 14.5px">See the shared tasks</a>
+<a href="shared-tasks" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 6px; background: #E39B1B; color: #2A313C; text-decoration: none; font-weight: 700; font-size: 14.5px">See the shared tasks</a>
 <button onClick="{{replay}}" style="min-height: 44px; padding: 0 18px; border-radius: 6px; border: 1.5px solid #FFFFFF; background: transparent; color: #FFFFFF; font-size: 14.5px; font-weight: 600; cursor: pointer">Start again</button>
 </div>
 </div>
@@ -341,7 +348,7 @@ button{font-family:inherit}
 <footer style="background: #2A313C; color: #D5D8DD">
 <div style="max-width: 1100px; margin: 0 auto; padding: 32px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; gap: 12px 40px; align-items: center; font-size: 15px">
 <span style="font-weight: 700; color: #FFFFFF; font-size: 17px; margin-right: auto">AIGCTrustDetect, a workshop of COLING 2027</span>
-<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">Contact the organizers</a>
+<a href="mailto:aigctrustdetect@googlegroups.com" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">Email the organizers</a>
 <a href="https://2027.coling-iccl.org/" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">COLING 2027 main site</a>
 <a href="https://github.com/NLP2CT/COLING-2027-Workshop-AIGCTrustDetect" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">GitHub</a>
 </div>
@@ -457,11 +464,8 @@ class Component extends DCLogic {
 
     return {
       callsOpen: s.menu === 'calls',
-      committeeOpen: s.menu === 'committee',
       callsExpanded: s.menu === 'calls' ? 'true' : 'false',
-      committeeExpanded: s.menu === 'committee' ? 'true' : 'false',
       toggleCalls: toggleMenu('calls'),
-      toggleCommittee: toggleMenu('committee'),
       closeMenu: () => this.setState({ menu: null }),
 
       mainTab: s.tab === 'main',

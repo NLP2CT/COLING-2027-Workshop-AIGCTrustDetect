@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AIGCTrustDetect at COLING 2027: Organizers</title>
+<title>AIGCTrustDetect at COLING 2027: Committee</title>
 <meta name="description" content="The 1st Workshop on AI-Generated Content Detection and Trustworthy Governance (AIGCTrustDetect) at COLING 2027, Macau.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -17,6 +17,9 @@ button{font-family:inherit}
 .organizer-avatar{flex:0 0 76px;width:76px;height:76px;border-radius:50%;overflow:hidden;background:#DCEBF8;box-shadow:0 0 0 3px #EDF4FB}
 .organizer-avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:var(--photo-position,50% 50%);transform:scale(var(--photo-scale,1));transform-origin:var(--photo-origin,50% 50%)}
 .organizer-avatar--initials{display:flex;align-items:center;justify-content:center;color:#0156AA;font-size:21px;font-weight:700}
+.people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media(max-width:900px){.people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.people-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.organizer-branding>span{display:none}}
 @media(max-width:380px){.organizer-avatar{flex-basis:64px;width:64px;height:64px}}
 @keyframes unfold{from{transform:scaleX(.18);opacity:0}to{transform:scaleX(1);opacity:1}}
@@ -35,53 +38,45 @@ button{font-family:inherit}
 <div class="organizer-branding" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-right: auto">
 <a href="https://2027.coling-iccl.org/" aria-label="COLING 2027 main conference website" style="display: inline-flex; align-items: center; min-height: 48px"><img src="assets/images/coling2027-logo.png" alt="COLING 2027, May 9–14, 2027, Macao, China" style="display: block; height: 60px; width: auto"></a>
 <span aria-hidden="true" style="width: 1px; height: 44px; background: #CECFD1"></span>
-<a href="index.html" style="display: inline-flex; flex-direction: column; justify-content: center; min-height: 48px; color: #2A313C; text-decoration: none">
+<a href="./" style="display: inline-flex; flex-direction: column; justify-content: center; min-height: 48px; color: #2A313C; text-decoration: none">
 <span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 19px"><svg width="30" height="18" viewBox="0 0 34 20" fill="none" aria-hidden="true"><rect x="1" y="1" width="32" height="18" rx="9" stroke="#2A313C" stroke-width="2"></rect><circle cx="10" cy="10" r="4" fill="#E39B1B"></circle><circle cx="24" cy="10" r="4" fill="#0156AA"></circle><line x1="17" y1="4" x2="17" y2="16" stroke="#2A313C" stroke-width="2" stroke-dasharray="2 2"></line></svg>AIGCTrustDetect</span>
 <span style="font-size: 13px; color: #5A616B">Workshop at COLING 2027</span>
 </a>
 </div>
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; font-size: 16px">
-<a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Home</a>
+<a href="./" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Home</a>
 <div style="position: relative">
 <button onClick="{{toggleCalls}}" aria-expanded="{{callsExpanded}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid transparent; background: transparent; color: #2A313C; font-size: 16px; font-weight: 400; cursor: pointer">Calls<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0 L10 0 L5 6 Z" fill="#2A313C"></path></svg></button>
 <sc-if value="{{callsOpen}}" hint-placeholder-val="{{false}}">
 <div class="rise" style="position: absolute; top: 100%; left: -12px; z-index: 30; min-width: 210px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 6px; box-shadow: 0 12px 28px -12px rgba(42, 49, 60, 0.35); padding: 6px 0; display: flex; flex-direction: column">
-<a href="call-for-papers.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Call for Papers</a>
-<a href="shared-tasks.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Shared Tasks</a>
+<a href="call-for-papers" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Call for Papers</a>
+<a href="shared-tasks" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Shared Tasks</a>
 </div>
 </sc-if>
 </div>
-<div style="position: relative">
-<button onClick="{{toggleCommittee}}" aria-expanded="{{committeeExpanded}}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; border: 0; border-bottom: 2px solid #0156AA; background: transparent; color: #2A313C; font-size: 16px; font-weight: 700; cursor: pointer">Committee<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M0 0 L10 0 L5 6 Z" fill="#2A313C"></path></svg></button>
-<sc-if value="{{committeeOpen}}" hint-placeholder-val="{{false}}">
-<div class="rise" style="position: absolute; top: 100%; left: -12px; z-index: 30; min-width: 210px; background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 6px; box-shadow: 0 12px 28px -12px rgba(42, 49, 60, 0.35); padding: 6px 0; display: flex; flex-direction: column">
-<a href="organizers.html" aria-current="page" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #0156AA; font-weight: 700; text-decoration: none">Organizers</a>
-<a href="program-committee.html" style="display: flex; align-items: center; min-height: 44px; padding: 0 16px; color: #2A313C; font-weight: 400; text-decoration: none">Program Committee</a>
-</div>
-</sc-if>
-</div>
-<a href="speakers.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Speakers</a>
-<a href="program.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Program</a>
-<a href="participants-info.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Participants Info</a>
-<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Contact</a>
+<a href="organizers" aria-current="page" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid #0156AA; font-weight: 700">Committee</a>
+<a href="speakers" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Speakers</a>
+<a href="program" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Program</a>
+<a href="participants-info" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Participants Info</a>
+<a href="sponsorship" style="display: inline-flex; align-items: center; min-height: 44px; color: #2A313C; text-decoration: none; border-bottom: 2px solid transparent; font-weight: 400">Sponsorship</a>
 </nav>
 </div>
 </header>
 <section aria-label="Page banner" style="background-color: #0055A6; background-image: linear-gradient(90deg, rgba(0, 60, 130, 0.55) 0%, rgba(0, 60, 130, 0.25) 45%, rgba(0, 60, 130, 0) 70%), url('assets/images/coling2027-banner.jpg'), linear-gradient(90deg, #0055A6 0%, #0063B1 50%, #0070BC 100%); background-size: cover, 100% auto, cover; background-position: center, center bottom, center; background-repeat: no-repeat; min-height: clamp(200px, 19vw, 280px); color: #FFFFFF; display: flex">
 <div style="width: 100%; max-width: 1100px; margin: 0 auto; padding: clamp(28px, 3.4vw, 44px) clamp(20px, 4vw, 40px) 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 6px; text-shadow: 0 2px 6px rgba(0, 20, 60, 0.35)">
 <p style="margin: 0; font-size: 16px; font-weight: 600; color: #D9ECFF">AIGCTrustDetect @ COLING 2027</p>
-<h1 style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; font-weight: 700">Organizers</h1>
+<h1 style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; font-weight: 700">Committee</h1>
 </div>
 </section>
 <main style="max-width: 1100px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px)">
-<section style="padding-top: clamp(40px, 5vw, 60px)">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 16px">
+<section id="organizers" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Organizers</h2>
+<div class="people-grid">
 <article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 10px; padding: 20px 22px; display: flex; gap: 16px; align-items: flex-start">
 <div class="organizer-avatar" style="--photo-position: 50% 25%"><img src="assets/images/organizers/junchao-wu.jpg" alt="Junchao Wu" width="76" height="76" loading="lazy" decoding="async"></div>
 <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
 <h2 style="margin: 0; font-size: 18px; font-weight: 700">Junchao Wu</h2>
 <p style="margin: 0; font-size: 14.5px; line-height: 1.45; color: #5A616B">University of Macau</p>
-<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere"><a href="mailto:nlp2ct.junchao@gmail.com">nlp2ct.junchao@gmail.com</a></p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6"><a href="https://junchaoiu.github.io/">Homepage</a></p>
 </div>
 </article>
@@ -90,7 +85,6 @@ button{font-family:inherit}
 <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
 <h2 style="margin: 0; font-size: 18px; font-weight: 700">Runzhe Zhan</h2>
 <p style="margin: 0; font-size: 14.5px; line-height: 1.45; color: #5A616B">Nanyang Technological University</p>
-<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere"><a href="mailto:nlp2ct.runzhe@gmail.com">nlp2ct.runzhe@gmail.com</a></p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6"><a href="https://runzhe.me/">Homepage</a></p>
 </div>
 </article>
@@ -99,7 +93,6 @@ button{font-family:inherit}
 <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
 <h2 style="margin: 0; font-size: 18px; font-weight: 700">Guangsheng Bao</h2>
 <p style="margin: 0; font-size: 14.5px; line-height: 1.45; color: #5A616B">Fuyao University of Science and Technology</p>
-<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere"><a href="mailto:baoguangsheng@fyust.edu.cn">baoguangsheng@fyust.edu.cn</a></p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6"><a href="https://baoguangsheng.github.io/">Homepage</a></p>
 </div>
 </article>
@@ -108,7 +101,6 @@ button{font-family:inherit}
 <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
 <h2 style="margin: 0; font-size: 18px; font-weight: 700">Xin Chen</h2>
 <p style="margin: 0; font-size: 14.5px; line-height: 1.45; color: #5A616B">Nanjing University</p>
-<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere"><a href="mailto:x.chen@smail.nju.edu.cn">x.chen@smail.nju.edu.cn</a></p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6"><a href="https://chen-x666.github.io/">Homepage</a></p>
 </div>
 </article>
@@ -117,7 +109,6 @@ button{font-family:inherit}
 <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
 <h2 style="margin: 0; font-size: 18px; font-weight: 700">Shu Yang</h2>
 <p style="margin: 0; font-size: 14.5px; line-height: 1.45; color: #5A616B">King Abdullah University of Science and Technology</p>
-<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere"><a href="mailto:shu.yang@kaust.edu.sa">shu.yang@kaust.edu.sa</a></p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6"><a href="https://scholar.google.com/citations?user=RrKb-9oAAAAJ&amp;hl=en">Google Scholar</a></p>
 </div>
 </article>
@@ -126,7 +117,6 @@ button{font-family:inherit}
 <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
 <h2 style="margin: 0; font-size: 18px; font-weight: 700">Zeyu Wu</h2>
 <p style="margin: 0; font-size: 14.5px; line-height: 1.45; color: #5A616B">University of Macau</p>
-<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere"><a href="mailto:nlp2ct.zeyu@gmail.com">nlp2ct.zeyu@gmail.com</a></p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6"><a href="https://scholar.google.com/citations?user=V5iMvowAAAAJ&amp;hl=en">Google Scholar</a></p>
 </div>
 </article>
@@ -135,7 +125,6 @@ button{font-family:inherit}
 <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
 <h2 style="margin: 0; font-size: 18px; font-weight: 700">Yichao Du</h2>
 <p style="margin: 0; font-size: 14.5px; line-height: 1.45; color: #5A616B">Wuhan University</p>
-<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere"><a href="mailto:echaoustc@gmail.com">echaoustc@gmail.com</a></p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6"><a href="https://duyichao.github.io/">Homepage</a></p>
 </div>
 </article>
@@ -144,7 +133,6 @@ button{font-family:inherit}
 <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
 <h2 style="margin: 0; font-size: 18px; font-weight: 700">Yulong Chen</h2>
 <p style="margin: 0; font-size: 14.5px; line-height: 1.45; color: #5A616B">University of Cambridge</p>
-<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere"><a href="mailto:yc632@cam.ac.uk">yc632@cam.ac.uk</a></p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6"><a href="https://cylnlp.github.io/">Homepage</a></p>
 </div>
 </article>
@@ -153,7 +141,6 @@ button{font-family:inherit}
 <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
 <h2 style="margin: 0; font-size: 18px; font-weight: 700">Longyue Wang</h2>
 <p style="margin: 0; font-size: 14.5px; line-height: 1.45; color: #5A616B">Alibaba Group</p>
-<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere"><a href="mailto:vincentwang0229@gmail.com">vincentwang0229@gmail.com</a></p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6"><a href="https://www.longyuewang.com/">Homepage</a></p>
 </div>
 </article>
@@ -162,10 +149,31 @@ button{font-family:inherit}
 <div style="min-width: 0; display: flex; flex-direction: column; gap: 4px">
 <h2 style="margin: 0; font-size: 18px; font-weight: 700">Derek F. Wong</h2>
 <p style="margin: 0; font-size: 14.5px; line-height: 1.45; color: #5A616B">University of Macau</p>
-<p style="margin: 6px 0 0; font-size: 15px; line-height: 1.6; overflow-wrap: anywhere"><a href="mailto:derekfw@um.edu.mo">derekfw@um.edu.mo</a></p>
 <p style="margin: 0; font-size: 15px; line-height: 1.6"><a href="https://personal.fic.um.edu.mo/derek-wong/">Homepage</a></p>
 </div>
 </article>
+</div>
+</section>
+<section id="program-committee" style="padding-top: clamp(40px, 5vw, 60px)">
+<h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Program Committee Members</h2>
+<p style="margin: 0 0 16px; font-size: 16.5px; line-height: 1.6; color: #5A616B">Confirmed members to date, listed alphabetically. The committee will grow to more than 50 members, so that every submission receives at least two reviews from Program Committee members and no reviewer is assigned more than two papers.</p>
+<p style="margin: 0 0 16px; font-size: 16.5px; line-height: 1.6; color: #5A616B">Program Committee members are required to have published at least one first-author paper at a CCF A or B conference in a relevant research area. Senior Program Committee members are experienced researchers in the field and make the final acceptance decisions.</p>
+<div class="people-grid">
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Guangsheng Bao</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">Fuyao University of Science and Technology, Fuzhou, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Guanhua Chen</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">University of Macau, Macao, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Xin Chen</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">Nanjing University, Nanjing, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Yichao Du</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">Wuhan University, Wuhan, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Shudong Liu</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">University of Macau, Macao, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Yefeng Liu</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">Ant Group, Hangzhou, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Dawei Lu</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">Renmin University of China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Xiaoxue Sun</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">Zhejiang University</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Longyue Wang</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">Alibaba Group, Hangzhou, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Derek F. Wong</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">University of Macau, Macao, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Junchao Wu</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">University of Macau, Macao, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Zeyu Wu</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">University of Macau, Macao, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Shu Yang</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">King Abdullah University of Science and Technology, Thuwal, Saudi Arabia</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Yutong Yao</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">University of Macau, Macao, China</p></article>
+<article style="background: #FFFFFF; border: 1px solid #CECFD1; border-radius: 8px; padding: 14px 16px"><h3 style="margin: 0 0 4px; font-size: 16.5px; font-weight: 700">Runzhe Zhan</h3><p style="margin: 0; font-size: 14px; line-height: 1.45; color: #5A616B">Nanyang Technological University, Singapore</p></article>
 </div>
 </section>
 </main>
@@ -188,7 +196,7 @@ button{font-family:inherit}
 <footer style="background: #2A313C; color: #D5D8DD">
 <div style="max-width: 1100px; margin: 0 auto; padding: 32px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; gap: 12px 40px; align-items: center; font-size: 15px">
 <span style="font-weight: 700; color: #FFFFFF; font-size: 17px; margin-right: auto">AIGCTrustDetect, a workshop of COLING 2027</span>
-<a href="contact.html" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">Contact the organizers</a>
+<a href="mailto:aigctrustdetect@googlegroups.com" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">Email the organizers</a>
 <a href="https://2027.coling-iccl.org/" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">COLING 2027 main site</a>
 <a href="https://github.com/NLP2CT/COLING-2027-Workshop-AIGCTrustDetect" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">GitHub</a>
 </div>
@@ -207,11 +215,8 @@ class Component extends DCLogic {
     const t = (n) => () => this.setState({ menu: this.state.menu === n ? null : n });
     return {
       callsOpen: s.menu === 'calls',
-      committeeOpen: s.menu === 'committee',
       callsExpanded: s.menu === 'calls' ? 'true' : 'false',
-      committeeExpanded: s.menu === 'committee' ? 'true' : 'false',
       toggleCalls: t('calls'),
-      toggleCommittee: t('committee'),
       closeMenu: () => this.setState({ menu: null })
     };
   }
