@@ -17,6 +17,9 @@ button{font-family:inherit}
 .unfold{animation:unfold 700ms cubic-bezier(.2,.8,.2,1) both;transform-origin:50% 0}
 @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .rise{animation:rise 420ms ease both}
+.brand-lockup{flex-wrap:wrap}
+.workshop-logo{display:block;width:290px;max-width:100%;height:auto}
+@media (max-width: 700px){.brand-lockup{gap:4px 10px}.brand-divider{display:none}.conference-logo{height:48px!important}.workshop-logo{width:260px}}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -26,12 +29,11 @@ button{font-family:inherit}
 <div style="font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', Arial, sans-serif; color: #2A313C; background: #EEEEEE; min-height: 100vh">
 <header style="background: #EEEEEE; border-bottom: 1px solid #DDDEE0">
 <div style="max-width: 1100px; margin: 0 auto; padding: 10px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px">
-<div style="display: flex; align-items: center; gap: 16px; margin-right: auto">
-<a href="https://2027.coling-iccl.org/" aria-label="COLING 2027 main conference website" style="display: inline-flex; align-items: center; min-height: 48px"><img src="assets/images/coling2027-logo.png" alt="COLING 2027, May 9–14, 2027, Macao, China" style="display: block; height: 60px; width: auto"></a>
-<span aria-hidden="true" style="width: 1px; height: 44px; background: #CECFD1"></span>
-<a href="./" style="display: inline-flex; flex-direction: column; justify-content: center; min-height: 48px; color: #2A313C; text-decoration: none">
-<span style="display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 19px"><svg width="30" height="18" viewBox="0 0 34 20" fill="none" aria-hidden="true"><rect x="1" y="1" width="32" height="18" rx="9" stroke="#2A313C" stroke-width="2"></rect><circle cx="10" cy="10" r="4" fill="#E39B1B"></circle><circle cx="24" cy="10" r="4" fill="#0156AA"></circle><line x1="17" y1="4" x2="17" y2="16" stroke="#2A313C" stroke-width="2" stroke-dasharray="2 2"></line></svg>AIGCTrustDetect</span>
-<span style="font-size: 13px; color: #5A616B">Workshop at COLING 2027</span>
+<div class="brand-lockup" style="display: flex; align-items: center; gap: 16px; margin-right: auto">
+<a href="https://2027.coling-iccl.org/" aria-label="COLING 2027 main conference website" style="display: inline-flex; align-items: center; min-height: 48px"><img class="conference-logo" src="assets/images/coling2027-logo.png" alt="COLING 2027, May 9–14, 2027, Macao, China" style="display: block; height: 60px; width: auto"></a>
+<span class="brand-divider" aria-hidden="true" style="width: 1px; height: 44px; background: #CECFD1"></span>
+<a href="./" aria-label="AIGCTrustDetect at COLING 2027: Home" style="display: inline-flex; align-items: center; min-height: 54px; text-decoration: none">
+<img class="workshop-logo" src="assets/images/aigctrustdetect-logo.svg" alt="AIGCTrustDetect @ COLING 2027" width="290" height="54">
 </a>
 </div>
 <nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 0 22px; font-size: 16px">
@@ -120,8 +122,25 @@ button{font-family:inherit}
 </section>
 <section id="submission" style="padding-top: clamp(40px, 5vw, 60px)">
 <h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Submission</h2>
-<p style="margin: 0 0 18px; font-size: 17px; line-height: 1.7">We invite <strong>long and short papers</strong>, with the <strong>same page limits as the COLING 2027 main conference</strong>, formatted using the <strong>ACL Rolling Review (ARR)</strong> <a href="https://github.com/acl-org/acl-style-files">template</a>. Papers can be submitted directly through <strong>OpenReview</strong> [link TBD]. All submissions are reviewed <strong>double-blind</strong>. Each paper receives <strong>at least two reviews from Program Committee members</strong>, and final acceptance decisions are made by <strong>Senior Program Committee members</strong>.</p>
-<p style="margin: 0; font-size: 17px; line-height: 1.7">We <strong>cannot accept submissions for publication that will be (or have been) published elsewhere</strong>. All accepted submissions will be presented as <strong>talks and/or posters</strong> at the workshop, and will be <strong>included in the workshop proceedings</strong>.</p>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 16.5px; line-height: 1.6">
+<tbody>
+<tr style="border-top: 1px solid #CECFD1; border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 20px 14px 0; text-align: left; font-weight: 600; vertical-align: top; width: 250px">Paper categories and page limits</th><td style="padding: 14px 0"><strong>Long papers:</strong> up to 8 pages of content.<br><strong>Short papers:</strong> up to 4 pages of content.</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 20px 14px 0; text-align: left; font-weight: 600; vertical-align: top; width: 250px">Formatting</th><td style="padding: 14px 0">PDF using the <a href="https://github.com/acl-org/acl-style-files">official ACL template</a> in review mode, following the ACL two-column A4 format, the <a href="https://aclrollingreview.org/cfp">ACL/ARR requirements</a>, and the <a href="https://acl-org.github.io/ACLPUB/formatting.html">ACL formatting guidelines</a>.</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 20px 14px 0; text-align: left; font-weight: 600; vertical-align: top; width: 250px">Anonymity and review</th><td style="padding: 14px 0">Double-anonymous review. Anonymize the paper, supplementary materials, and linked artifacts in accordance with the <a href="https://aclrollingreview.org/cfp#instructions-for-two-way-anonymized-review">ARR policy</a>.</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 20px 14px 0; text-align: left; font-weight: 600; vertical-align: top; width: 250px">ARR commitments</th><td style="padding: 14px 0">Commitments must include completed ARR reviews and a meta-review and satisfy the current ARR commitment requirements. Papers must no longer be under ARR review. Authors submitting to ARR must also follow its current profile, reviewing-service, and submission policies.</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 20px 14px 0; text-align: left; font-weight: 600; vertical-align: top; width: 250px">Required section and checklist</th><td style="padding: 14px 0">Include a Limitations section and complete the <a href="https://aclrollingreview.org/responsibleNLPresearch/">Responsible NLP Research Checklist</a> with the submission.</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 20px 14px 0; text-align: left; font-weight: 600; vertical-align: top; width: 250px">Publication options</th><td style="padding: 14px 0">Archival and non-archival. See the <a href="#non-archival-option">Non-Archival Option</a> below.</td></tr>
+<tr style="border-bottom: 1px solid #CECFD1"><th scope="row" style="padding: 14px 20px 14px 0; text-align: left; font-weight: 600; vertical-align: top; width: 250px">Presentation and attendance</th><td style="padding: 14px 0">Hybrid: in person and online.</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 18px 0; font-size: 17px; line-height: 1.7">Papers can be submitted directly through <strong>OpenReview</strong> [link TBD]. We also accept <strong>ARR commitments</strong> [link TBD]. Each paper receives <strong>at least two reviews from Program Committee members</strong>, and final acceptance decisions are made by <strong>Senior Program Committee members</strong>.</p>
+<div id="non-archival-option">
+<h3 style="margin: 24px 0 10px; font-size: 21px; font-weight: 700">Non-Archival Option</h3>
+<p style="margin: 0; font-size: 17px; line-height: 1.7">Workshops are traditionally archival. To allow dual submission of work, we also include a non-archival track. If accepted, these submissions will still participate and present their work in the workshop. A reference to the paper will be hosted on the workshop website if desired, but the paper will not be included in the official workshop proceedings. Please submit through OpenReview and indicate that this is a cross-submission at the bottom of the submission form. You can also skip this step and inform us of your non-archival preference after the reviews.</p>
+</div>
+<p style="margin: 18px 0 0; font-size: 17px; line-height: 1.7"><strong>Archival submissions</strong> must report original, unpublished work that is not under review elsewhere. The <strong>non-archival option</strong> permits dual submission; authors must comply with the policies of any other venue involved. All accepted submissions, whether archival or non-archival, will be presented as <strong>talks and/or posters</strong> at the workshop. Only archival papers will be <strong>included in the workshop proceedings</strong>.</p>
 </section>
 <section id="dates" style="padding-top: clamp(40px, 5vw, 60px)">
 <h2 style="margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #CECFD1; font-size: clamp(24px, 2.4vw, 30px); font-weight: 700">Important Dates</h2>
@@ -193,7 +212,7 @@ button{font-family:inherit}
 <footer style="background: #2A313C; color: #D5D8DD">
 <div style="max-width: 1100px; margin: 0 auto; padding: 32px clamp(20px, 4vw, 40px); display: flex; flex-wrap: wrap; gap: 12px 40px; align-items: center; font-size: 15px">
 <span style="font-weight: 700; color: #FFFFFF; font-size: 17px; margin-right: auto">AIGCTrustDetect, a workshop of COLING 2027</span>
-<a href="mailto:aigctrustdetect@googlegroups.com" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">Email the organizers</a>
+<a href="mailto:aigctrustdetect@googlegroups.com" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">aigctrustdetect@googlegroups.com</a>
 <a href="https://2027.coling-iccl.org/" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">COLING 2027 main site</a>
 <a href="https://github.com/NLP2CT/COLING-2027-Workshop-AIGCTrustDetect" style="display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF">GitHub</a>
 </div>

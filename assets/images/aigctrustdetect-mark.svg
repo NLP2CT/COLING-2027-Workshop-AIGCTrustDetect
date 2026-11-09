@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 40" role="img" aria-labelledby="title desc">
+  <title id="title">AIGCTrustDetect inspection mark</title>
+  <desc id="desc">A magnifying glass inspects a document and reveals an amber evidence span.</desc>
+  <rect x="5" y="3" width="32" height="34" rx="4" fill="none" stroke="#2A313C" stroke-width="2.4"/>
+  <g fill="none" stroke="#2A313C" stroke-width="2.2" stroke-linecap="round">
+    <path d="M12 11H29"/>
+    <path d="M12 17H26"/>
+    <path d="M12 23H21"/>
+    <path d="M12 29H18" stroke-opacity=".58"/>
+  </g>
+  <circle cx="37" cy="22" r="10" fill="#FFFFFF" stroke="#0156AA" stroke-width="3.2"/>
+  <path d="M44.5 29.5L55 38" fill="none" stroke="#0156AA" stroke-width="4" stroke-linecap="round"/>
+  <path d="M31 22H42" fill="none" stroke="#E39B1B" stroke-width="3" stroke-linecap="round"/>
+</svg>
