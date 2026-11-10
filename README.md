@@ -40,9 +40,9 @@ All deadlines are 11:59 pm UTC-12h (anywhere on earth). The [live site](https://
 | Home | `index.html` |
 | Call for Papers | `call-for-papers.html` |
 | Shared Tasks | `shared-tasks.html` |
-| Shared Task Track 1 | `shared-tasks/track1.html` |
-| Shared Task Track 2 | `shared-tasks/track2.html` |
-| Shared Task Track 3 | `shared-tasks/track3.html` |
+| Shared Task 1 | `shared-tasks/track1.html` |
+| Shared Task 2 | `shared-tasks/track2.html` |
+| Shared Task 3 | `shared-tasks/track3.html` |
 | Committee (organizers and program committee) | `organizers.html` |
 | Invited Speakers | `speakers.html` |
 | Program | `program.html` |
