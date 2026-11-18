@@ -15,8 +15,10 @@ Main track:
 | Event | Date |
 |---|---|
 | First call for papers | November 5, 2026 |
+| Direct submission opens | November 25, 2026 |
 | Second call for papers | December 5, 2026 |
 | Direct paper submission deadline | January 10, 2027 |
+| ARR commitment deadline | To be released |
 | Notification of acceptance | February 10, 2027 |
 
 Shared task track:
