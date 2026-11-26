@@ -26,7 +26,7 @@ Shared task track:
 | Event | Date |
 |---|---|
 | Call for participation and registration opens | November 5, 2026 |
-| Task guidelines and training data release | November 25, 2026 |
+| Task guidelines and training data release | ~~November 25, 2026~~ **November 30, 2026** |
 | Test data release | December 20, 2026 |
 | Results submission deadline | December 25, 2026 |
 | Leaderboard release and call for system papers | December 30, 2026 |
